@@ -1,0 +1,25 @@
+{
+  "name": "bate-ponto-electron",
+  "version": "1.0.0",
+  "description": "frontend com electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroMiguel7/BATE-PONTO-Frontend.git"
+  },
+  "keywords": [
+    "electron",
+    "bate",
+    "ponto",
+    "brisa"
+  ],
+  "author": "Equipe ##",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroMiguel7/BATE-PONTO-Frontend/issues"
+  },
+  "homepage": "https://github.com/PedroMiguel7/BATE-PONTO-Frontend#readme"
+}
