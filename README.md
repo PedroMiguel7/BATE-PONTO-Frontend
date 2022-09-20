@@ -1,4 +1,4 @@
-# BatePonto
+# Migule Points
 
 Este projeto tem o intuito de automatizar a frequência dos aprendizes da brisanet, usando Angular no front, Golang no backend e postgresql como banco.
 
