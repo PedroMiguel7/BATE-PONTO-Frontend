@@ -62,10 +62,22 @@ label {
     background-color: inherit;
   }
 
-  input:focus ~ span, input:not(:placeholder-shown).input:not(:focus) ~ span {
+  input:focus ~ span, input:valid ~ span {
     top: -0.5rem;
     font-size: 12px;
     left: 0.8rem;
+  }
+
+  // Caso tenha algum botão, como o de mostrar senha
+  button {
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 15px);
+    bottom: calc(50% - 15px);
+
+    border: 0;
+    background: none;
   }
 }
 
