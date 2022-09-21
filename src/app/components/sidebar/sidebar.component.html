@@ -1,1 +1,23 @@
-<p>sidebar works!</p>
+
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : '' ">
+    <div class="logo-container">
+        <button class="logo"></button>
+        <div class="logo-text" *ngIf="collapsed">Migule Points</div>
+        <button class="btn-close" *ngIf="collapsed">
+            <i class="fal fa-time-close-icon"></i>
+        </button>
+    </div>
+
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-item-link" [routerLink]="[data.routerLink]">
+                <span nz-icon nzType="home" nzTheme="fill"></span>
+                    <span class="sidenav-text">{{data.label}}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="sidenav-decoration">
+        <img src="../../../assets/Logo.svg" alt="">
+    </div>
+</div>
