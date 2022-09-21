@@ -1,20 +1,17 @@
-import { HomeAdmComponent } from './home-adm/home-adm.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { HomeUserComponent } from './home-user/home-user.component';
 import { LoginComponent } from './login/login.component';
-import { BatePontoComponent } from './bate-ponto/bate-ponto.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'BPONTO', component: BatePontoComponent},
-  {path: 'HOME', component: HomeAdmComponent}
+  { path: "", component: LoginComponent },
+  { path: "home-adm", component: HomeAdminComponent },
+  { path: "home-user", component: HomeUserComponent },
 ];
 
 @NgModule({
-  declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }

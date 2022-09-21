@@ -4,17 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { BatePontoComponent } from './bate-ponto/bate-ponto.component';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { HomeUserComponent } from './home-user/home-user.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { HomeAdmComponent } from './home-adm/home-adm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    BatePontoComponent,
-    SidebarComponent,
-    HomeAdmComponent
+    HomeAdminComponent,
+    HomeUserComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
