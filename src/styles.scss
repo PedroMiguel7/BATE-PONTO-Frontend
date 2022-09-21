@@ -7,12 +7,150 @@
   font-family: 'Inter', sans-serif;
 }
 
-.input {
-  height: 59px;
-
-  background: rgba(217, 217, 217, 0.14);
-  border-radius: 5px;
-  color: white;
-  padding-left: 10px;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+:root {
+  --azul1: #0B68FB;
+  --azul2: #154dda;
+}
+
+// -=-=-=-=-=-=-=- Estilização Global dos Inputs -=-=-=-=-=-=-=-
+
+label {
+  color: white;
+}
+
+// Labels que contem inputs do tipo text
+.ipt_text {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: inherit;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #666;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+    height: 100%;
+
+    &:hover, &:focus {
+      border-color: var(--azul1);
+    }
+  }
+
+  span {
+    font-size: 16px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.5rem;
+    color: white;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: inherit;
+  }
+
+  input:focus ~ span, input:not(:placeholder-shown).input:not(:focus) ~ span {
+    top: -0.5rem;
+    font-size: 12px;
+    left: 0.8rem;
+  }
+}
+
+
+// Inputs do tipo submit
+.ipt_submit {
+  background-color: var(--azul1);
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: .2s;
+
+  &:hover {
+    background-color: var(--azul2);
+    transition: .2s;
+  }
+
+  border: none;
+  width: 100%;
+}
+
+
+// Inputs do tipo checkbox
+.ipt_check {
+  display: inline-block;
+  vertical-align: middle;
+  width: fit-content;
+
+  input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  span {
+    position: relative;
+    padding-left: 2.2em;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 1.5em;
+      width: 1.5em;
+      background: #FFF;
+      margin-right: 0.5em;
+      border: 1px solid #999;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.1s ease;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    &::after {
+      content: "\2713";
+      position: absolute;
+      top: 50%;
+      left: 0.75em;
+      transform: translate(-50%, -50%);
+      font-size: 1em;
+      color: #FFF;
+      opacity: 0;
+      transition: all 0.1s ease;
+    }
+
+    &:focus::before, &:hover::before {
+      background: #DDD;
+    }
+  }
+
+  input:checked + span::before {
+    background: var(--azul1);
+    border-color: var(--azul1);
+  }
+
+  input:checked + span::after {
+    opacity: 1;
+  }
+}
