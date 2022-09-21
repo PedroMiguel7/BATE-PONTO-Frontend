@@ -2,8 +2,26 @@
   <section>
     <h1>MIGULE POINTS</h1>
     <form action="">
-      <input type="email" class="input" placeholder="Coloca o email aí meliante"/>
-      <input type="password" class="input" placeholder="Coloca a senha aí meliante"/>
+      <!-- Recebendo o email do usuário -->
+      <label class="ipt_text">
+        <input type="email" required/>
+        <span>Email</span>
+      </label>
+
+      <!-- Recebendo a Senha do Usuário -->
+      <label class="ipt_text">
+        <input type="password" required/>
+        <span>Senha</span>
+      </label>
+
+      <label class="ipt_check">
+        <input type="checkbox" class="ipt_check">
+        <span>Manter Conectado</span>
+      </label>
+      
+      <button type="submit" class="ipt_submit">
+        <span nz-icon nzType="login" nzTheme="outline"></span> LOGIN
+      </button>
     </form>
   </section>
 </div>
