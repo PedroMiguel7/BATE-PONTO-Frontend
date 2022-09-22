@@ -4,13 +4,13 @@
     <form action="">
       <!-- Recebendo o email do usuário -->
       <label class="ipt_text">
-        <input type="text" required/>
+        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required/>
         <span>Email</span>
       </label>
 
       <!-- Recebendo a Senha do Usuário -->
       <label class="ipt_text">
-        <input type="password" required/>
+        <input type="password" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}" required/>
         <span>Senha</span>
       </label>
 

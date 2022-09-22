@@ -14,13 +14,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  email: string = "";
+  senha: string = "";
 
   fazLogin(){
-    const user: UserModel = {
-      email: "admin",
-      senha: "admin"
-    }
-
-    this.LoginService.fazLogin(user)
+    console.log(this.email)
+    this.LoginService.fazLogin({
+      email: this.email,
+      senha: this.senha
+    })
   }
 }
