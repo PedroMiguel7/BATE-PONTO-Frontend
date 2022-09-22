@@ -20,7 +20,8 @@
       </label>
 
       <button (click)="fazLogin()" type="submit" class="ipt_submit">
-        <span nz-icon nzType="login" nzTheme="outline"></span> LOGIN
+        <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
+        <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span> LOGIN
       </button>
     </form>
   </section>

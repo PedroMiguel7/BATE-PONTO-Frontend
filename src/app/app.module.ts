@@ -16,6 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { JwtModule } from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}
 
 registerLocaleData(en);
 
@@ -34,7 +39,14 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzInputModule,
-    NzIconModule
+    NzIconModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["http://localhost:4200/"],
+        disallowedRoutes: [""],
+      },
+    }),
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
