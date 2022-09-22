@@ -4,6 +4,7 @@
     background: #1D2637;
    
    display: flex;
+   overflow: hidden;
 }
 
 header {
@@ -12,20 +13,24 @@ header {
     background: linear-gradient(247.39deg, #1b59f8 0.74%, #3B8AFF 100%);
 }
 
+main {
+    width: 100%;
+}
+
 .corpo {
     display: flex;
     width: 100%;
 
     div {
-
         justify-content: center;
         align-items: center;
 
         section {
+            padding-top: 10%;
             margin-top: 15px;
     
             min-width: 450px;
-            height: 260px;
+            height: 70%;
           
             background: #1A1A1A;
             border-radius: 10px;
@@ -35,7 +40,6 @@ header {
             align-items: center;
             position: relative;
         }
-        
     }
 
     .corpo-part2 {
