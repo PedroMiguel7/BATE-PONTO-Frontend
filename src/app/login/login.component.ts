@@ -1,3 +1,5 @@
+import { LoginService } from './login.service';
+import { UserModel } from './login.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private LoginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
+
+  fazLogin(){
+    const user: UserModel = {
+      email: "admin",
+      senha: "admin"
+    }
+
+    this.LoginService.fazLogin(user)
+  }
 }
