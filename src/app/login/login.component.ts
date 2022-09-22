@@ -10,18 +10,24 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor(private LoginService: LoginService) { }
-
   ngOnInit(): void {
   }
 
+  loading: boolean = false
   email: string = "";
   senha: string = "";
 
   fazLogin(){
-    console.log(this.email)
+    this.loading = true
+
     this.LoginService.fazLogin({
       email: this.email,
       senha: this.senha
+    }).then((res: any): any => {
+      localStorage.setItem("access_token", res.token);
+      
+    }).catch(err => {
+      this.loading = false
     })
   }
 }

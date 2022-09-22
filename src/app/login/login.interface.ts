@@ -1,4 +1,5 @@
 export interface UserModel {
   email: string,
-  senha: string
+  senha: string,
+  token?: string,
 }
