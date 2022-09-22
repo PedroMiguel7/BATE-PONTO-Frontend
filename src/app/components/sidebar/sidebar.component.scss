@@ -1,4 +1,4 @@
-.sidenav {
+.sidebar {
     background:#1A1A1A;
     transition: all .5s ease;
     position: fixed;
@@ -9,24 +9,44 @@
     height: 100vh;
     box-shadow: 4.83811px 0px 19.3525px rgba(0, 0, 6, 0.15);
 
-    .logo-container{
+    .sidebar-nav{
+        margin-top: 262px;
+        margin-bottom: 150px;
+        
         display: flex;
-        align-items: center;
-        padding: 0.938rem 0.938rem 0 0.938rem;
-        width: 100%;
-
-        .logo{
-            background: #fff;
-        }
-
-        .logo-text{
-            color: aliceblue;
-        }
-
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .sidenav-decoration{
-        margin-top: 430px;
+    .sidebar-nav-item {
+        width: 100%;
+        height: 52px;
+        border: 1px solid #1A75FF;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        position: relative;
+
+        .mini-square{
+            position: absolute;
+            width: 6px;
+            height: 52px;
+            background: #0062FF;
+            right: 0;
+            
+        }
+
+        .sidenav-item-icon{
+            padding-left: 23px;
+            padding-right: 18px;
+        }
+    }
+
+
+    .sidebar-decoration{
+        margin-bottom: 149px;
         opacity: 0.2;
-    }   
+    } 
 }
