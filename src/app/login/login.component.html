@@ -1,16 +1,33 @@
+<nz-alert
+  *ngIf="alert.visible"
+  class="alert"
+  nzBanner
+  [nzType]="alert.type"
+  [nzMessage]="alert.message">
+</nz-alert>
+
 <div id="main">
   <section>
     <h1>MIGULE POINTS</h1>
-    <form action="">
+
+    <form [formGroup]="formLogin">
       <!-- Recebendo o email do usuário -->
       <label class="ipt_text">
-        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required/>
+        <input
+          type="text"
+          [(ngModel)]="user.email"
+          formControlName="email"
+          required />
         <span>Email</span>
       </label>
 
       <!-- Recebendo a Senha do Usuário -->
       <label class="ipt_text">
-        <input type="password" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}" required/>
+        <input
+          type="password"
+          [(ngModel)]="user.senha"
+          formControlName="senha"
+          required />
         <span>Senha</span>
       </label>
 
