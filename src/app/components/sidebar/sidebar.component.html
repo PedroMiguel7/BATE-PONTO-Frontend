@@ -1,15 +1,27 @@
-
-
 <div class="sidebar">
 
-    <ul class="sidebar-nav" *ngFor="let data of navData">
-        <li class="sidebar-nav-item" >
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-item" routerLink="/home-adm"  routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}"   >
             <div class="mini-square"></div>
+
             <a class="sidebar-item-link" 
-                [routerLink]="[data.routerLink]"    
-                >
+           >
+
                 <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
-                    <span class="sidebar-text">{{data.label}}</span>
+                <span class="sidebar-text">Home</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <div class="mini-square"></div>
+
+            <a class="sidebar-item-link" 
+            routerLink="/home-user" 
+            routerLinkActive="active"
+            >
+
+                <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
+                <span class="sidebar-text">Pessoas</span>
             </a>
         </li>
     </ul>
