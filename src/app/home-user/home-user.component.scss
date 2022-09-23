@@ -19,18 +19,38 @@ main {
 
 .corpo {
     display: flex;
-    width: 100%;
+    height: 100%;
+    
 
-    div {
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    .corpo-part1 {
+        width: 45%;
+        height: 100%;
 
         section {
             padding-top: 10%;
             margin-top: 15px;
     
-            min-width: 450px;
-            height: 70%;
+            min-width: 80px;
+            height: 40%;
+          
+            background: #1A1A1A;
+            border-radius: 10px;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        section + section {
+            padding-top: 10%;
+            margin-top: 15px;
+    
+            min-width: 80px;
+            height: 40%;
           
             background: #1A1A1A;
             border-radius: 10px;
@@ -43,13 +63,11 @@ main {
     }
 
     .corpo-part2 {
-
-        justify-content: center;
-        align-items: center;
+        width: 45%;
         
         .sectiondate {
             margin-top: 15px;
-            min-width: 450px;
+            min-width: 300px;
             height: 70%;
 
             background: #1A1A1A;
