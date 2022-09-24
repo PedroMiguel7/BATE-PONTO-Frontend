@@ -9,6 +9,8 @@ export class BatePontoUserComponent implements OnInit {
 
   constructor() { }
 
+  loading: boolean = false
+  
   ngOnInit(): void {
   }
 

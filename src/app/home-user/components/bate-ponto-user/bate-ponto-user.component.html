@@ -1,1 +1,8 @@
-<p>bate-ponto-user works!</p>
+<h1>ÚLTIMOS PONTOS</h1>
+<div class="pontos">
+    <div class="ponto"> aa</div>
+</div>
+<button type="submit" class="ipt_submit">
+    <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
+    <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span> BATER PONTO
+</button>
