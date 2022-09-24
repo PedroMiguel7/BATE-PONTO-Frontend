@@ -16,9 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
+import { CalendarioUserComponent } from './home-user/components/calendario-user/calendario-user.component';
+import { GraficoUserComponent } from './home-user/components/grafico-user/grafico-user.component';
+import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/bate-ponto-user.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -33,7 +38,10 @@ registerLocaleData(en);
     HomeAdminComponent,
     HomeUserComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    CalendarioUserComponent,
+    GraficoUserComponent,
+    BatePontoUserComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +53,8 @@ registerLocaleData(en);
     NzInputModule,
     NzIconModule,
     NzAlertModule,
+    NzCalendarModule,
+    NzBadgeModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

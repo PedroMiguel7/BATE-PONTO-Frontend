@@ -1,0 +1,24 @@
+#container {
+  background: #1A1A1A;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  overflow: hidden;
+
+  h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: -45px;
+  }
+
+  #contCalendar {
+    background-color: #1a1a1a;
+    padding: 20px;
+    padding-top: 0px;
+    border-radius: 5px;
+  }
+}
+
