@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
@@ -51,6 +53,8 @@ registerLocaleData(en);
     NzInputModule,
     NzIconModule,
     NzAlertModule,
+    NzCalendarModule,
+    NzBadgeModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

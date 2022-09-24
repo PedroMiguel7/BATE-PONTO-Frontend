@@ -166,3 +166,88 @@ label {
     opacity: 1;
   }
 }
+
+.ant-picker-calendar * {
+  // COR QUE FICARÁ O CARD DE CADA DATA
+  background: #1a1a1a !important;
+  transition-duration: 0s !important;
+  text-align: left;
+
+  // COR DAS DATAS QUE FICARÃO INATIVAS
+  color: rgba(255, 255, 255, 0.2);
+
+  .ant-select-selection-item, .ant-radio-group span {
+    color: white !important;
+  }
+
+  .ant-select-arrow * {
+    fill: white;
+  }
+
+  .ant-badge span {
+    color: rgb(241, 239, 88) !important;
+  }
+
+  table {
+    border-collapse: separate;
+    font-size: 15px;
+    font-weight: bold;
+
+    // BORDA DOS CARDS DE DATA
+    td {
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      div {
+        border-top: 0 !important;
+        margin: 0 !important;
+      }
+
+      &:hover * {
+        background-color: #333 !important;
+        transition-duration: .2s;
+      }
+    }
+  }
+
+  // COR DAS DATAS QUE ESTÃO NO MÊS (DIA 01 - 31)
+  .ant-picker-cell-in-view *, th {
+    color: white;
+  }
+
+  .ant-picker-calendar-date-today div:first-child {
+    color: white !important;
+    background-color: var(--azul1) !important;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .ant-picker-content .ng-star-inserted tr .ng-star-inserted:first-child, .ant-picker-content .ng-star-inserted tr .ng-star-inserted:last-child {
+    color: var(--azul1) !important;
+  }
+
+  .events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .events .ant-badge-status {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+
+  .notes-month {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .notes-month section {
+    font-size: 28px;
+  }
+}
