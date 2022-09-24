@@ -1,5 +1,8 @@
-export interface USER {
-    id: number;
-    nome: string,
-    tipo: number,
+export interface user {
+  sum?: "",
+  tipo?: "",
+  nome?: "",
+  exp?: "",
+  iat?: "",
+  iss?: ""
 }

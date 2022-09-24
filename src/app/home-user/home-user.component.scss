@@ -7,25 +7,24 @@
     overflow: hidden;
 }
 
-header {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(247.39deg, #1b59f8 0.74%, #3B8AFF 100%);
-
-    h1{
-        padding-left: 10px;
-        color: #fff;
-        font-size: 30px;
-    }
-
-    p{
-        padding-left: 10px;
-        color: #fff;
-    }
-}
-
 main {
     width: 100%;
+
+    #header {
+      h1 {
+        font-weight: 700;
+        font-size: 4vh;
+        line-height: 3vh;
+        color: #FFFFFF;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 2vh;
+        line-height: 2vh;
+        color: #FFFFFF;
+      }
+    }
 }
 
 .corpo {
@@ -87,7 +86,7 @@ main {
             .pontos{
                 height: 70%;
                 overflow-y: hidden;
-                
+
                 .ponto{
                     background-color: #1f1f1f;
                     width: 97%;
@@ -112,7 +111,7 @@ main {
         padding-left: 20px;
 
         .sectiondate {
-            
+
             min-width: 300px;
             height: 84%;
 
