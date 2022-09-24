@@ -6,12 +6,50 @@ h1 {
 }
 
 .pontos{
-    height: 70%;
+    height: 100%;
     overflow-y: hidden;
 
     .ponto{
         background-color: #1f1f1f;
+        border-radius: 10px;
         width: 97%;
+        height: 47px;
+
+        display: flex;
+     
+        align-items: center; 
+        padding-left: 6px;
+        
+        .pontos-circulo-entrada{
+            background-color: #ade84c;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+        }
+
+        .pontos-circulo-saida{
+            background-color: #e84c4c;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+        }
+
+        h5{
+            padding-left: 15px;
+            color: white;
+            font-size: 18px;
+        }
+
+        h6{
+            padding-left: 4px;
+            color: #949494;
+            font-size: 14px;
+        }
+
+    }
+
+    .ponto + .ponto{
+        margin-top: 10px;
     }
 }
 
