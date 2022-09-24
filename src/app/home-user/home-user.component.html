@@ -10,16 +10,16 @@
                 <section>
                     <h1>HISTÓRICO DE HORAS TRABALHADAS</h1>
                 </section>
-                <section>
-                    <h1>ULTIMOS PONTOS</h1>
+                <div class="section">
+                    <h1>ÚLTIMOS PONTOS</h1>
                     <div class="pontos">
-
+                        <div class="ponto"> aa</div>
                     </div>
                     <button type="submit" class="ipt_submit">
-                        <!--<span *ngIf="" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>-->
-                        <span *ngIf="" nz-icon nzType="login" nzTheme="outline"></span> BATER PONTO
+                        <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
+                        <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span> BATER PONTO
                     </button>
-                </section>
+                </div>
             </div>
             <div class="corpo-part2">
                 <div class="sectiondate"></div>
