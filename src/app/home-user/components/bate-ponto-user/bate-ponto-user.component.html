@@ -7,7 +7,8 @@
         <h6>{{ponto.data}}</h6>
     </div>
 </div>
-<button type="submit" class="ipt_submit">
+<button (click)="batendoPonto([IDUSER])" type="submit" class="ipt_submit">
     <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
-    <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span> BATER PONTO
+    <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span>
+    BATER PONTO
 </button>
