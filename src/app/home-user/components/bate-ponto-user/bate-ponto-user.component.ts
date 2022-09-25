@@ -36,6 +36,12 @@ export class BatePontoUserComponent implements OnInit {
 
   batendoPonto(IDUSER: any){
     this.loading = true
+    this.pontosService.baterPonto(IDUSER, this.ponto)
+    .then(pontos => console.log(pontos))
+    .catch(err => console.log(err))
+  }
+
+  getPonto(IDUSER: any){
     this.pontosService.obterTodos(IDUSER)
     .then(pontos => console.log(pontos))
     .catch(err => console.log(err))
