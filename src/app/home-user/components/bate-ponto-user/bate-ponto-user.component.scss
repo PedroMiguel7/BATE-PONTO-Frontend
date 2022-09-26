@@ -10,13 +10,16 @@ h2 {
     color: #FFFFFF;
 }
 
-.pontos{
-    height: 100%;
+.contTable {
+    height: 24.17vh;
+    overflow-y: scroll;
+}
+
+table {
     width: 100%;
-    overflow-y: hidden;
     padding: 10px;
 
-    .ponto{
+    tr {
         background-color: #1f1f1f;
         border-radius: 10px;
         width: 100%;
@@ -24,34 +27,41 @@ h2 {
         padding: 5px;
 
         display: flex;
-        align-items: center; 
-        
-        .pontos-circulo-entrada{
-            background-color: #ade84c;
-            border-radius: 50%;
-            width: 15px;
-            height: 15px;
+        align-items: center;
+
+        #contBolinha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3%;
+            
+            .circ {
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+            }
+
+            .pontos-circulo-entrada{
+                background-color: #ade84c;
+            }
+
+            .pontos-circulo-saida{
+                background-color: #e84c4c;
+            }
         }
 
-        .pontos-circulo-saida{
-            background-color: #e84c4c;
-            border-radius: 50%;
-            width: 15px;
-            height: 15px;
-        }
-
-        h5{
+        #hora {
             padding-left: 15px;
             color: white;
             font-size: 18px;
+            width: 13%;
         }
 
-        h6{
-            padding-left: 4px;
+        #data {
+            padding-left: 6px;
             color: #949494;
             font-size: 14px;
         }
-
     }
 
     .ponto + .ponto{
