@@ -1,28 +1,22 @@
 <div id="main">
     <app-sidebar></app-sidebar>
     <main>
-        <header>
-            <h1>Hi, username.</h1>
-            <p>bate seu ponto ae</p>
-        </header>
+        <app-header id="header">
+          <h1>Hello, {{ user.nome }}!</h1>
+          <p>Bate o ponto ai meliante</p>
+        </app-header>
         <div class="corpo">
             <div class="corpo-part1">
                 <section>
-                    <h1>HISTÓRICO DE HORAS TRABALHADAS</h1>
+                    <app-grafico-user> </app-grafico-user>
                 </section>
-                <section>
-                    <h1>ULTIMOS PONTOS</h1>
-                    <div class="pontos">
-
-                    </div>
-                    <button type="submit" class="ipt_submit">
-                        <!--<span *ngIf="" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>-->
-                        <span *ngIf="" nz-icon nzType="login" nzTheme="outline"></span> BATER PONTO
-                    </button>
-                </section>
+                <div class="section">
+                    <app-bate-ponto-user></app-bate-ponto-user>
+                </div>
             </div>
             <div class="corpo-part2">
-                <div class="sectiondate"></div>
+                <app-calendario-user></app-calendario-user>
+                <!-- <div class="sectiondate"></div> -->
             </div>
         </div>
     </main>

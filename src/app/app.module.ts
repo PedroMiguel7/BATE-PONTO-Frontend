@@ -11,12 +11,19 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { JwtModule } from "@auth0/angular-jwt";
+import { HeaderComponent } from './components/header/header.component';
+import { CalendarioUserComponent } from './home-user/components/calendario-user/calendario-user.component';
+import { GraficoUserComponent } from './home-user/components/grafico-user/grafico-user.component';
+import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/bate-ponto-user.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -30,16 +37,24 @@ registerLocaleData(en);
     LoginComponent,
     HomeAdminComponent,
     HomeUserComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent,
+    CalendarioUserComponent,
+    GraficoUserComponent,
+    BatePontoUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     NzInputModule,
     NzIconModule,
+    NzAlertModule,
+    NzCalendarModule,
+    NzBadgeModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

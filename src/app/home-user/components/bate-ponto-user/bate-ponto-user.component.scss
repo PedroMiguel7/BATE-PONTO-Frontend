@@ -1,0 +1,24 @@
+h1 {
+    font-size: 18px;
+    margin-top: -40px;
+    text-align: start;
+    color: white;
+}
+
+.pontos{
+    height: 70%;
+    overflow-y: hidden;
+
+    .ponto{
+        background-color: #1f1f1f;
+        width: 97%;
+    }
+}
+
+.ipt_submit {
+    font-size: 15px;
+    position: absolute;
+    bottom: 8px;
+    left: 15px;
+    width: calc(100% - 30px);
+}

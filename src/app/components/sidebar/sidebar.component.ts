@@ -9,11 +9,14 @@ import { navbarData } from './navData';
 export class SidebarComponent implements OnInit {
 
   navData = navbarData;
+  userTipo: number = 1;
 
+  
+ 
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
 }
