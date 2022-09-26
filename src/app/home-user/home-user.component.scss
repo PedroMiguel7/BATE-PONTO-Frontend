@@ -29,67 +29,43 @@ main {
 
 .corpo {
     display: flex;
-    height: 100%;
-
-    justify-content: center;
-    align-items: center;
-
+    height: 79.41vh;
+    align-items: flex-start;
+    margin-top: 2.69vh;
+    margin-left: 2.03vw;
+    
     .corpo-part1 {
-        width: 45%;
-        height: 100%;
-
-        section {
-            padding-top: 10%;
-            margin-top: 15px;
-
-            min-width: 80px;
-            height: 40%;
-
+        width: 37.21vw;
+        height: 72.16vh;
+        margin-right: 1.45vw;
+        
+        #contGrafico, #contPontos {
             background: #1A1A1A;
+            padding: 15px;
+            min-width: 80px;
             border-radius: 10px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
+        }
+        
+        #contGrafico {
+            height: 30.89vh;     
+        }
+        
+        #contPontos{
+            height: 38.68vh;
         }
 
-        .section{
-            padding-top: 10%;
-            margin-top: 15px;
-
-            min-width: 80px;
-            height: 40%;
-
-            background: #1A1A1A;
-            border-radius: 10px;
-
-            display: flex;
-            flex-direction: column;
-            position: relative;
-
-            padding-left: 10px;
+        section + section {
+            margin-top: 2.69vh;
         }
     }
-
+    
     .corpo-part2 {
-        width: 45%;
-        height: 100%;
+        height: 72.16vh;
+        width: 40.74vw;
+        min-width: 80px;
 
-        padding-top: 14px;
-        padding-left: 20px;
-
-        .sectiondate {
-
-            min-width: 300px;
-            height: 84%;
-
-            background: #1A1A1A;
-            border-radius: 10px;
-
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+        overflow: hidden;
+        background: #1A1A1A;
+        border-radius: 10px;
     }
 }

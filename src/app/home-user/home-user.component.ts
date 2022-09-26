@@ -18,6 +18,5 @@ export class HomeUserComponent implements OnInit {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(token);
     this.user = decodedToken
-    console.log(this.user)
   }
 }

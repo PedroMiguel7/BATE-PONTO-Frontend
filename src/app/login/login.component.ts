@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
 
         switch (decodedToken.tipo) {
           case 1: this.router.navigate(['/home-adm']); break;
-          case 2: this.router.navigate(['/home-comum']); break;
+          case 2: this.router.navigate(['/home-user']); break;
           default: this.alert = {
             type: "error",
             message: "Tipo de Usuário desconhecido",
