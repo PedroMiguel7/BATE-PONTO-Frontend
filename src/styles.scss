@@ -167,6 +167,10 @@ label {
   }
 }
 
+
+
+// Estilização do Calendário
+
 .ant-picker-calendar * {
   // COR QUE FICARÁ O CARD DE CADA DATA
   background: #1a1a1a !important;
@@ -176,14 +180,17 @@ label {
   // COR DAS DATAS QUE FICARÃO INATIVAS
   color: rgba(255, 255, 255, 0.2);
 
+  // COR DA LETRA DOS SELECTS DO TOPO DO CALENDÁRIO
   .ant-select-selection-item, .ant-radio-group span {
     color: white !important;
   }
 
+  // COR DAS SETAS DO SELECTS DO TOPO DO CALENDÁRIO
   .ant-select-arrow * {
     fill: white;
   }
 
+  // COR DOS EVENTOS DO CALENDÁRIO
   .ant-badge span {
     color: rgb(241, 239, 88) !important;
   }
@@ -193,18 +200,25 @@ label {
     font-size: 15px;
     font-weight: bold;
 
-    // BzORDA DOS CARDS DE DATA
-    td {
+    tbody tr {
       height: 10.11vh;
-      border: 1px solid rgba(255, 255, 255, 0.3) !important;
-      div {
-        border-top: 0 !important;
-        margin: 0 !important;
-      }
 
-      &:hover * {
-        background-color: #333 !important;
-        transition-duration: .2s;
+      // BORDA DOS CARDS DE DATA
+      td {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        height: 10.11vh !important;
+
+        > div {
+          // border: 1px solid red;
+          // flex-direction: column;
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        &:hover, &:hover * {
+          background-color: #333 !important;
+          transition-duration: .2s;
+        }
       }
     }
   }
@@ -212,6 +226,10 @@ label {
   // COR DAS DATAS QUE ESTÃO NO MÊS (DIA 01 - 31)
   .ant-picker-cell-in-view *, th {
     color: white;
+  }
+
+  .ant-picker-calendar-date-today {
+    position: unset !important;
   }
 
   .ant-picker-calendar-date-today div:first-child {
@@ -251,4 +269,8 @@ label {
   .notes-month section {
     font-size: 28px;
   }
+}
+
+.ant-picker-panel {
+  border-top: none !important;
 }
