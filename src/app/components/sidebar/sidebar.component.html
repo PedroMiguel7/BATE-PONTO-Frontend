@@ -1,23 +1,27 @@
+<div class="sidebar">
 
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-item" routerLink="/home-adm" routerLinkActive="active">
+            <div class="mini-square"></div>
 
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : '' ">
-    <div class="logo-container">
-        <button class="logo"></button>
-        <div class="logo-text" *ngIf="collapsed">Migule Points</div>
-        <button class="btn-close" *ngIf="collapsed">
-            <i class="fal fa-time-close-icon"></i>
-        </button>
-    </div>
+            <a class="sidebar-item-link">
 
-    <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a class="sidenav-item-link" [routerLink]="[data.routerLink]">
-                <span nz-icon nzType="home" nzTheme="fill"></span>
-                    <span class="sidenav-text">{{data.label}}</span>
+                <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
+                <span class="sidebar-text">Home</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <div class="mini-square"></div>
+
+            <a class="sidebar-item-link" routerLink="/home-user" routerLinkActive="active">
+
+                <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
+                <span class="sidebar-text">Pessoas</span>
             </a>
         </li>
     </ul>
-    <div class="sidenav-decoration">
+
+    <div class="sidebar-decoration">
         <img src="../../../assets/Logo.svg" alt="">
     </div>
 </div>

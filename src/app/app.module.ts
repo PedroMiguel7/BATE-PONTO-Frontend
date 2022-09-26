@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { HomeUserComponent } from './home-user/home-user.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SidebarUserComumComponent } from './components/sidebar-user-comum/sidebar-user-comum.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -39,6 +40,7 @@ registerLocaleData(en);
     HomeUserComponent,
     SidebarComponent,
     HeaderComponent,
+    SidebarUserComumComponent,
     CalendarioUserComponent,
     GraficoUserComponent,
     BatePontoUserComponent

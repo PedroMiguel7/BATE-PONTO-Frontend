@@ -1,16 +1,14 @@
 <div id="container">
-  <div id="contCalendar">
-    <h2>CALENDÁRIO</h2>
-    <nz-calendar>
-      <ul *nzDateCell="let date" class="events">
-        <ng-container [ngSwitch]="date.getDate()">
-          <ng-container *ngSwitchCase="8">
-            <li *ngFor="let item of listDataMap.eight">
-              <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
-            </li>
-          </ng-container>
+  <h2>CALENDÁRIO</h2>
+  <nz-calendar [nzFullscreen]="false">
+    <ul *nzDateCell="let date" class="events">
+      <ng-container [ngSwitch]="date.getDate()">
+        <ng-container *ngSwitchCase="8">
+          <li *ngFor="let item of listDataMap.eight">
+            <nz-badge [nzStatus]="item.type" [nzText]="item.content"></nz-badge>
+          </li>
         </ng-container>
-      </ul>
-    </nz-calendar>
-  </div>
+      </ng-container>
+    </ul>
+  </nz-calendar>
 </div>

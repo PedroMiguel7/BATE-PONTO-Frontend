@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { navbarData } from './nav-data';
+import { Component, OnInit, Output } from '@angular/core';
+import { navbarData } from './navData';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,11 +8,15 @@ import { navbarData } from './nav-data';
 })
 export class SidebarComponent implements OnInit {
 
-  collapsed = true;
   navData = navbarData;
+  userTipo: number = 1;
+
+  
+ 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
