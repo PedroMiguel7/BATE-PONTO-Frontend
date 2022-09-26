@@ -1,13 +1,15 @@
 <div class="container">
     <h2>ÚLTIMOS PONTOS</h2>
-    <table class="pontos">
-        <tr class="ponto" *ngFor="let ponto of pontos ; index as i">
-            <td id="contBolinha" *ngIf="ponto.status == 1"><div class="circ pontos-circulo-entrada"></div></td>
-            <td id="contBolinha" *ngIf="ponto.status == 2"><div class="circ pontos-circulo-saida"></div></td>
-            <td id="hora">{{ponto.hora}}</td>
-            <td id="data">{{ponto.data}}</td>
-        </tr>
-    </table>
+    <div class="contTable">
+        <table class="pontos">
+            <tr class="ponto" *ngFor="let ponto of pontos ; index as i">
+                <td id="contBolinha" *ngIf="ponto.status == 1"><div class="circ pontos-circulo-entrada"></div></td>
+                <td id="contBolinha" *ngIf="ponto.status == 2"><div class="circ pontos-circulo-saida"></div></td>
+                <td id="hora">{{ponto.hora}}</td>
+                <td id="data">{{ponto.data}}</td>
+            </tr>
+        </table>
+    </div>
     <button (click)="batendoPonto([IDUSER])" type="submit" class="ipt_submit">
         <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
         <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span>

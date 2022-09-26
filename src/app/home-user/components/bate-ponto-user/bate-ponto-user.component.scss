@@ -10,9 +10,13 @@ h2 {
     color: #FFFFFF;
 }
 
+.contTable {
+    height: 24.17vh;
+    overflow-y: scroll;
+}
+
 table {
     width: 100%;
-    overflow-y: hidden;
     padding: 10px;
 
     tr {
@@ -32,7 +36,6 @@ table {
             width: 3%;
             
             .circ {
-                position: absolute;
                 border-radius: 50%;
                 width: 15px;
                 height: 15px;

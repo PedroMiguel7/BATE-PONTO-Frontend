@@ -26,7 +26,7 @@ export class BatePontoUserComponent implements OnInit {
     status: 2
   }
 
-  pontos: Array<PONTO> | any = [this.ponto2, this.ponto];
+  pontos: Array<PONTO> | any = [this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto];
 
   constructor(private pontosService: PontosUserService) { }
 
