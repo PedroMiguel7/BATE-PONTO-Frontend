@@ -26,13 +26,15 @@ export class BatePontoUserComponent implements OnInit {
     status: 2
   }
 
-  pontos: Array<PONTO> = [this.ponto2, this.ponto];
+  pontos: Array<PONTO> | any = [this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto, this.ponto2, this.ponto];
 
   constructor(private pontosService: PontosUserService) { }
 
   loading: boolean = false
   
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+
+  }
 
   batendoPonto(IDUSER: any){
     this.loading = true
@@ -41,9 +43,9 @@ export class BatePontoUserComponent implements OnInit {
     .catch(err => console.log(err))
   }
 
-  getPonto(IDUSER: any){
+  getPonto(IDUSER: PONTO[]){
     this.pontosService.obterTodos(IDUSER)
-    .then(pontos => console.log(pontos))
+    .then(pontos => this.pontos = pontos)
     .catch(err => console.log(err))
   }
 }

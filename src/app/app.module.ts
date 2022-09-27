@@ -26,6 +26,7 @@ import { CalendarioUserComponent } from './home-user/components/calendario-user/
 import { GraficoUserComponent } from './home-user/components/grafico-user/grafico-user.component';
 import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/bate-ponto-user.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { PessoasComponent } from './pessoas/pessoas.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -44,8 +45,8 @@ registerLocaleData(en);
     SidebarUserComumComponent,
     CalendarioUserComponent,
     GraficoUserComponent,
-    BatePontoUserComponent
-
+    BatePontoUserComponent,
+    PessoasComponent
   ],
   imports: [
     BrowserModule,
