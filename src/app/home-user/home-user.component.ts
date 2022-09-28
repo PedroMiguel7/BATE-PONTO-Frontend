@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from './home-user.interface';
+import { user } from '../home-user.interface';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({

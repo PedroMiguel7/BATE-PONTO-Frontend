@@ -1,0 +1,60 @@
+<div class="container">
+  <h2>FREQUÊNCIA DO DIA</h2>
+
+  <div class="contFiltros">
+    <!-- Input de Pesquisa -->
+    <nz-input-group [nzSuffix]="suffixIconSearch">
+      <input type="text" nz-input placeholder="Pesquise Aqui" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+      <span nz-icon nzType="search"></span>
+    </ng-template>
+
+    <!-- Input dos Filtros -->
+    <a nz-dropdown [nzDropdownMenu]="menu">
+      FILTROS
+      <span nz-icon nzType="down"></span>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>1st menu item</li>
+        <li nz-menu-item>2nd menu item</li>
+        <li nz-menu-item>3rd menu item</li>
+        <li nz-menu-item nzDanger>4th danger item</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+
+  <div id="contTable">
+    <table >
+      <thead>
+        <tr>
+          <th style="width: 16.55vw" class="c_secundaria">NOME</th>
+          <th style="width: 8.78vw" class="c_entrada">ENTRADA</th>
+          <th style="width: 8.78vw" class="c_saida">SAÍDA</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="c_primaria" >PEDRO MIGULE</td>
+          <td class="c_secundaria" >08:12:51</td>
+          <td class="c_secundaria" >11:59:59</td>
+        </tr>
+
+        <tr>
+          <td class="c_primaria" >BRUNO DE CALCINHA</td>
+          <td class="c_secundaria" >08:12:51</td>
+          <td class="c_secundaria" >11:59:59</td>
+        </tr>
+
+        <tr>
+          <td class="c_primaria" >CAIO CALOTES</td>
+          <td class="c_secundaria" >08:12:51</td>
+          <td class="c_secundaria" >11:59:59</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
