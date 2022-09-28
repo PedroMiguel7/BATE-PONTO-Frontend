@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: "home-adm", component: HomeAdminComponent },
   { path: "home-user", component: HomeUserComponent },
   { path: "users", component: PessoasComponent },
-  {path: "user/:id", component: UserDtComponent}
+  {path: "users/:id", component: UserDtComponent}
 ];
 
 @NgModule({
