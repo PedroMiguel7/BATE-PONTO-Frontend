@@ -1,6 +1,15 @@
-<div class="">
+<div id="main">
     <app-sidebar></app-sidebar>
-    <p>
-        home adminininastro
-    </p>
+    <main>
+      <app-header id="header">
+        <h1>Hello, {{ user.nome }}!</h1>
+        <p>Aqui você poderá administrar todo sistema</p>
+      </app-header>
+      <div class="corpo">
+        <app-frequencia></app-frequencia>
+        <div class="corpo-part2">
+
+        </div>
+      </div>
+  </main>
 </div>
