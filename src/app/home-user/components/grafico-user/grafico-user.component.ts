@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
+import { Color, LegendPosition, ScaleType } from '@swimlane/ngx-charts';
+import { multi } from './data';
 
 @Component({
   selector: 'app-grafico-user',
@@ -7,39 +8,36 @@ import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
   styleUrls: ['./grafico-user.component.scss']
 })
 export class GraficoUserComponent implements OnInit {
-  multi = [
-    {
-      'name': 'Brasil',
-      'value': 100321
-    },
-    {
-      'name': 'Germany',
-      'value': 700123
-    }
-  ];
-  view: [number,number] = [700, 300];
-
+  
+  multi = [];
   // options
-  legend: boolean = false;
-  showLabels: boolean = false;
+  legend: boolean = true;
+  showLabels: boolean = true;
   animations: boolean = true;
   xAxis: boolean = true;
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
+  xAxisLabel: string = 'Days';
+  yAxisLabel: string = 'Hours';
   timeline: boolean = true;
 
-  colorScheme: Color = {
-    name: 'myScheme',
+ 
+  colorScheme: Color = { 
+    name: 'vivid',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#f00', '#0f0', '#0ff'],
-  };
+    domain: [
+      '#1A75FF ',
+      '#2196f3',
+      '#0026e9',
+      '#81c9fa',
+    ]
+};
+
 
   constructor() {
-    // Object.assign(this, { multi });
+    Object.assign(this, { multi });
   }
 
   onSelect(data: any): void {
@@ -53,5 +51,6 @@ export class GraficoUserComponent implements OnInit {
   onDeactivate(data: any): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
+
   ngOnInit(): void { }
 }
