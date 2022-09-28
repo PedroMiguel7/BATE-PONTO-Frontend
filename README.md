@@ -15,5 +15,6 @@ Este projeto tem o intuito de automatizar a frequência dos aprendizes da brisan
 
 <div>-<a href="https://github.com/Brun0Nasc"> Bruno Brito </a> </div>
 <div>-<a href="https://github.com/caiosousaf"> Caio Sousa </a> </div>
+<div>-<a href="https://github.com/matheustgf10"> Matheus Figueirêdo </a> </div>
 
  
