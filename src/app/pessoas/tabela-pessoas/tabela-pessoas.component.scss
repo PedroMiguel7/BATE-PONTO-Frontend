@@ -1,0 +1,87 @@
+:host{
+  border-radius: 5px;
+  width: 100%;
+  height: 61vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1F1F1F;
+  padding: 1.35vh;
+  padding-top: 0;
+
+  table {
+    text-align: left;
+    width: 100%;
+
+    td {
+      padding: 1.35vh;
+    }
+
+    th {
+      padding: 1.35vh;
+      color: #BCBCBC;
+    }
+
+    .c_primaria {
+      color: white;
+    }
+
+    .c_secundaria {
+      color: #4189fd;
+    }
+
+    thead {
+      font-size: 1.5vh;
+      line-height: 1.5vh;
+    }
+
+    tbody {
+
+      background: #181818;
+      color: #BCBCBC;
+
+      tr {
+        height: 4.12vh;
+        border-radius: 55px;
+
+        font-weight: 700;
+        font-size: 1.54vh;
+        line-height: 100%;
+        border-radius: 5px;
+
+        td {
+          background: #353535;
+
+          div {
+            display: flex;
+            justify-content: space-between;
+
+            * {
+              color: white;
+            }
+
+            button {
+              border: none;
+              padding: 5px;
+              border-radius: 5px;
+            }
+
+            #editButton {
+              background-color: rgb(223, 168, 66);
+            }
+
+            #deleteButton {
+              background-color: rgb(223, 66, 66);
+            }
+          }
+        }
+      }
+
+      tr:first-child td:first-child { border-top-left-radius: 5px; }
+      tr:first-child td:last-child { border-top-right-radius: 5px; }
+      tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+      tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+    }
+  }
+}

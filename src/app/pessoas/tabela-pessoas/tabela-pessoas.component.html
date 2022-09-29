@@ -1,0 +1,32 @@
+<table>
+  <thead>
+    <tr>
+      <th width="3%">id</th>
+      <th width="35%">nome</th>
+      <th width="20%">email</th>
+      <th width="">tipo</th>
+      <th width="">Data de Cadastro</th>
+      <th width="6%">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of dataList">
+      <td class="c_secundaria">{{ pessoa.id }}</td>
+      <td class="c_primaria">{{ pessoa.nome }}</td>
+      <td>{{ pessoa.email }}</td>
+      <td>{{ pessoa.tipo == 1 ? "Admin" : "Usuário" }}</td>
+      <td>{{ pessoa.created_at }}</td>
+      <td>
+        <div>
+          <button title="Editar" id="editButton">
+            <span nz-icon nzType="edit" nzTheme="outline"></span>
+          </button>
+          <button title="Apagar" id="deleteButton">
+            <span nz-icon nzType="delete" nzTheme="outline"></span>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

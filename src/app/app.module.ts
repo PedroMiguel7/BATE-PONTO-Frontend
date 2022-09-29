@@ -22,6 +22,8 @@ import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
@@ -31,6 +33,7 @@ import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/b
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
+import { TabelaPessoasComponent } from './pessoas/tabela-pessoas/tabela-pessoas.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -53,6 +56,7 @@ registerLocaleData(en);
     PessoasComponent,
     UserDtComponent,
     FrequenciaComponent,
+    TabelaPessoasComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,8 @@ registerLocaleData(en);
     NzCalendarModule,
     NzDropDownModule,
     NzBadgeModule,
+    NzTableModule,
+    NzDividerModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
