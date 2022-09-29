@@ -15,11 +15,22 @@
 
             <a class="sidebar-item-link" routerLink="/users" routerLinkActive="active">
 
-                <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
+                <span nz-icon nzType="team" nzTheme="outline" style="color: #4D4D4D" class="sidenav-item-icon"></span>
                 <span class="sidebar-text">Pessoas</span>
             </a>
         </li>
+        <li class="logout-item">
+            <a class="logout-item-link" routerLink="/" (click)="fazLogout()">
+                <span nz-icon nzType="logout" nzTheme="outline" ></span>
+                <span class="sidebar-text">Logout</span>
+    
+            </a>
+        </li>
     </ul>
+
+    <div>
+        
+    </div>
 
     <div class="sidebar-decoration">
         <img src="../../../assets/Logo.svg" alt="">
