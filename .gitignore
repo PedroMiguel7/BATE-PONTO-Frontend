@@ -20,6 +20,7 @@ package-lock.json
 *.launch
 .settings/
 *.sublime-workspace
+.prettierignore
 
 # Visual Studio Code
 .vscode/*

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input  } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { PONTO } from './bate-ponto-user.interface';
 import { PontosUserService } from './pontos-user.service';
 
@@ -40,8 +41,11 @@ export class BatePontoUserComponent implements OnInit {
 
   loading: boolean = false
   
-  ngOnInit(): void { 
-
+  ngOnInit(): void {
+    const token: any = localStorage.getItem("access_token");
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token);
+    this.getPonto(decodedToken.sum)
   }
 
   batendoPonto(IDUSER: any){
