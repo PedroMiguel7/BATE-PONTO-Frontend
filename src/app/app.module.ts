@@ -15,11 +15,14 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
+
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
 import { CalendarioUserComponent } from './home-user/components/calendario-user/calendario-user.component';
@@ -28,6 +31,7 @@ import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/b
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -49,6 +53,7 @@ registerLocaleData(en);
     BatePontoUserComponent,
     PessoasComponent,
     UserDtComponent,
+    FrequenciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +66,7 @@ registerLocaleData(en);
     NzIconModule,
     NzAlertModule,
     NzCalendarModule,
+    NzDropDownModule,
     NzBadgeModule,
     NgxChartsModule,
     JwtModule.forRoot({
