@@ -1,15 +1,57 @@
 <table>
   <thead>
     <tr>
-      <th width="3%">id</th>
-      <th width="35%">nome</th>
-      <th width="20%">email</th>
-      <th width="">tipo</th>
-      <th width="">Data de Cadastro</th>
-      <th width="6%">Ações</th>
+      <th width="4%">
+        <div>
+          <span>id</span>
+          <div>
+            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+          </div>
+        </div>
+      </th>
+      <th width="35%">
+        <div>
+          <span>nome</span>
+          <div>
+            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+          </div>
+        </div>
+      </th>
+      <th width="20%">
+        <div>
+          <span>email</span>
+          <div>
+            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+          </div>
+        </div>
+      </th>
+      <th width="">
+        <div>
+          <span>tipo</span>
+          <div>
+            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+          </div>
+        </div>
+      </th>
+      <th width="">
+        <div>
+          <span>Data de Cadastro</span>
+          <div>
+            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+          </div>
+        </div>
+      </th>
+      <th width="6%">
+        <span>Ações</span>
+      </th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="dataList.length > 0">
     <tr *ngFor="let pessoa of dataList">
       <td class="c_secundaria">{{ pessoa.id }}</td>
       <td class="c_primaria">{{ pessoa.nome }}</td>
@@ -28,5 +70,6 @@
       </td>
     </tr>
   </tbody>
+  <span nz-icon [nzType]="'sync'" *ngIf="dataList.length == 0" [nzSpin]="true"></span>
 </table>
 

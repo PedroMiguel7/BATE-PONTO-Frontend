@@ -21,6 +21,39 @@
     th {
       padding: 1.35vh;
       color: #BCBCBC;
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        > div {
+          margin-left: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          // Botões de filtros por ordenação
+          button {
+            cursor: pointer;
+            border: 0;
+            background-color: transparent;
+            height: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            // Icones de seta pra cima e para baixo
+            span {
+              font-size: 10px;
+              line-height: 10px;
+
+              &:hover {
+                color: #4189fd;
+              }
+            }
+          }
+        }
+      }
     }
 
     .c_primaria {
@@ -62,6 +95,7 @@
             }
 
             button {
+              cursor: pointer;
               border: none;
               padding: 5px;
               border-radius: 5px;
@@ -69,10 +103,16 @@
 
             #editButton {
               background-color: rgb(223, 168, 66);
+              &:hover {
+                background-color: rgb(240, 173, 50);
+              }
             }
 
             #deleteButton {
               background-color: rgb(223, 66, 66);
+              &:hover {
+                background-color: rgb(240, 50, 50);
+              }
             }
           }
         }
