@@ -31,6 +31,9 @@ import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/b
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
+import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
+
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -53,6 +56,7 @@ registerLocaleData(en);
     PessoasComponent,
     UserDtComponent,
     FrequenciaComponent,
+    GraficoComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,7 @@ registerLocaleData(en);
     NzCalendarModule,
     NzDropDownModule,
     NzBadgeModule,
+    NgxChartsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
