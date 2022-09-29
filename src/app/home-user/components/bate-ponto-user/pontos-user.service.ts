@@ -15,7 +15,7 @@ export class PontosUserService {
   }
   
   obterTodos(IDUSER:any){
-    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencias/${[IDUSER]}`).toPromise();
+    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencia/lista?orderBy=nome&order=asc&data=2022-09-29${[IDUSER]}`).toPromise();
   }
 
   baterPonto(IDUSER:any, ponto: any){
