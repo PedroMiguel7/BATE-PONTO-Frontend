@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { navbarData } from './navData';
 import { LoginService } from 'src/app/login/login.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,12 +16,13 @@ export class SidebarComponent implements OnInit {
  
   constructor( private LoginService: LoginService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  
 
-  }
-
-  fazLogout(){
+  fazLogout(){    
     localStorage.removeItem('access_token')
   }
 
 }
+
+
