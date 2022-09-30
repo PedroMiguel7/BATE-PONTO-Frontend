@@ -9,7 +9,6 @@ import { PointsService } from './points.service';
   styleUrls: ['./grafico.component.scss']
 })
 export class GraficoComponent implements OnInit {
- 
   below = LegendPosition.Below;
 
   // options
@@ -25,7 +24,7 @@ export class GraficoComponent implements OnInit {
   gradient: boolean = true;
 
 
-  colorScheme: Color = { 
+  colorScheme: Color = {
     name: 'vivid',
     selectable: true,
     group: ScaleType.Ordinal,
@@ -54,9 +53,9 @@ export class GraficoComponent implements OnInit {
   onDeactivate(data: any): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
-  
+
    ngOnInit(): void {
-  
+
   }
-  
+
 }
