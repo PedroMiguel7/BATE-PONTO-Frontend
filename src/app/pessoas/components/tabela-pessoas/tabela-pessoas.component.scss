@@ -4,6 +4,7 @@
   .contFiltros {
     width: 100%;
     margin-bottom: 1vh;
+    display: flex;
 
     * {
       color: white;
@@ -103,31 +104,6 @@
             div {
               display: flex;
               justify-content: space-between;
-
-              * {
-                color: white;
-              }
-
-              button {
-                cursor: pointer;
-                border: none;
-                padding: 5px;
-                border-radius: 5px;
-              }
-
-              #editButton {
-                background-color: rgb(223, 168, 66);
-                &:hover {
-                  background-color: rgb(240, 173, 50);
-                }
-              }
-
-              #deleteButton {
-                background-color: rgb(223, 66, 66);
-                &:hover {
-                  background-color: rgb(240, 50, 50);
-                }
-              }
             }
           }
         }

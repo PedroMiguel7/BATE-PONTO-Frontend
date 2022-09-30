@@ -12,4 +12,12 @@ export class DeletePessoaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cancel(): void {
+
+  }
+
+  confirm(): void {
+
+  }
+
 }

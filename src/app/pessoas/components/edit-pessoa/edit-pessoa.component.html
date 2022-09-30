@@ -1,3 +1,12 @@
-<button title="Editar" id="editButton">
+<button title="Editar" id="editButton" (click)="showModal()">
   <span nz-icon nzType="edit" nzTheme="outline"></span>
 </button>
+
+<nz-modal
+      [(nzVisible)]="isVisible"
+      nzTitle="Editar Pessoa"
+      (nzOnCancel)="handleCancel()"
+      (nzOnOk)="handleOk()"
+      [nzOkLoading]="isOkLoading"
+    >
+</nz-modal>
