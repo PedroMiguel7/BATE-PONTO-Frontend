@@ -34,7 +34,9 @@ import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/b
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
-import { TabelaPessoasComponent } from './pessoas/tabela-pessoas/tabela-pessoas.component';
+import { TabelaPessoasComponent } from './pessoas/components/tabela-pessoas/tabela-pessoas.component';
+import { EditPessoaComponent } from './pessoas/components/edit-pessoa/edit-pessoa.component';
+import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete-pessoa.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -58,6 +60,8 @@ registerLocaleData(en);
     UserDtComponent,
     FrequenciaComponent,
     TabelaPessoasComponent,
+    EditPessoaComponent,
+    DeletePessoaComponent,
   ],
   imports: [
     BrowserModule,
