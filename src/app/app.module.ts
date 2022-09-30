@@ -30,6 +30,7 @@ import { GraficoUserComponent } from './home-user/components/grafico-user/grafic
 import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/bate-ponto-user.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
 
 export function tokenGetter() {
@@ -67,6 +68,7 @@ registerLocaleData(en);
     NzCalendarModule,
     NzDropDownModule,
     NzBadgeModule,
+    NgxChartsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
