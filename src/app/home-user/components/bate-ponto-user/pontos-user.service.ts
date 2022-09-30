@@ -8,6 +8,8 @@ import { PONTO } from './bate-ponto-user.interface';
 })
 export class PontosUserService {
 
+  // não usando 
+
   constructor(private httpclient: HttpClient) { }
 
   token: any = localStorage.getItem("access_token");

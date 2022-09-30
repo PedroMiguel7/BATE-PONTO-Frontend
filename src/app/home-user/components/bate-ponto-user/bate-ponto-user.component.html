@@ -3,12 +3,12 @@
     <div class="contTable">
         <table class="pontos">
             <tbody>
-                <tr class="ponto" *ngFor="let ponto of pontos ; index as i">
+                <tr class="ponto" *ngFor="let ponto of PONTOS ; index as i">
                     <td id="contBolinha"><div class="circ pontos-circulo-entrada"></div></td>
                     <td id="hora">{{ponto.dataEntrada.slice(10,16)}}</td>
                     <td id="data">{{ponto.dataEntrada.slice(0,10)}}</td>
                 </tr>
-                <tr class="ponto" *ngFor="let ponto of pontos ; index as i">
+                <tr class="ponto" *ngFor="let ponto of PONTOS ; index as i">
                     <td id="contBolinha"><div class="circ pontos-circulo-saida"></div></td>
                     <td id="hora">{{ponto.dataSaida.slice(10,16)}}</td>
                     <td id="data">{{ponto.dataSaida.slice(0,10)}}</td> 

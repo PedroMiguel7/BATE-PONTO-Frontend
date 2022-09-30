@@ -13,7 +13,7 @@ export class HomeUserSsService {
   token: any = localStorage.getItem("access_token");
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer: ${this.token}` })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${this.token}` })
   }
 
   obterTodos(IDUSER:any){
