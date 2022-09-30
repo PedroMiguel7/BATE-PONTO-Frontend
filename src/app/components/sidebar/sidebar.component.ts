@@ -11,8 +11,10 @@ export class SidebarComponent implements OnInit {
   navData = navbarData;
   userTipo: number = 1;
 
-  
- 
+  fazLogout() {
+    localStorage.removeItem("access_token")
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,86 @@
+<div class="contFiltros">
+  <nz-input-group [nzSuffix]="suffixIconSearch">
+    <input type="text" nz-input placeholder="Buscar Pessoas" />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <span nz-icon nzType="search"></span>
+  </ng-template>
+
+  <app-post-pessoa></app-post-pessoa>
+</div>
+
+<div class="contTable">
+  <table>
+    <thead>
+      <tr>
+        <th width="4%">
+          <div>
+            <span>id</span>
+            <div>
+              <button (click)="changeFiltro(1, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+              <button (click)="changeFiltro(1, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </th>
+        <th width="35%">
+          <div>
+            <span>nome</span>
+            <div>
+              <button (click)="changeFiltro(2, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+              <button (click)="changeFiltro(2, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </th>
+        <th width="20%">
+          <div>
+            <span>email</span>
+            <div>
+              <button (click)="changeFiltro(3, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+              <button (click)="changeFiltro(3, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </th>
+        <th width="">
+          <div>
+            <span>tipo</span>
+            <div>
+              <button (click)="changeFiltro(4, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+              <button (click)="changeFiltro(4, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </th>
+        <th width="">
+          <div>
+            <span>Data de Cadastro</span>
+            <div>
+              <button (click)="changeFiltro(5, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+              <button (click)="changeFiltro(5, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </th>
+        <th width="6%">
+          <span>Ações</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngIf="!loading">
+      <tr *ngFor="let pessoa of dataList">
+        <td class="c_secundaria">{{ pessoa.id }}</td>
+        <td class="c_primaria">{{ pessoa.nome }}</td>
+        <td>{{ pessoa.email }}</td>
+        <td>{{ pessoa.tipo == 1 ? "Admin" : "Usuário" }}</td>
+        <td>{{ pessoa.created_at }}</td>
+        <td>
+          <div>
+            <app-edit-pessoa></app-edit-pessoa>
+            <app-delete-pessoa></app-delete-pessoa>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="contLoading">
+    <span nz-icon [nzType]="'sync'" *ngIf="loading" [nzSpin]="true"></span>
+  </div>
+</div>
+
