@@ -1,136 +1,152 @@
-:host{
-  border-radius: 5px;
+:host {
   width: 100%;
-  height: 61vh;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #1F1F1F;
-  padding: 1.35vh;
-  padding-top: 0;
-
-  table {
-    text-align: left;
+  .contFiltros {
     width: 100%;
+    margin-bottom: 1vh;
 
-    td {
-      padding: 1.35vh;
+    * {
+      color: white;
+      background-color: #353535;
+      border-radius: 5px;
+      border: none;
     }
+  }
 
-    th {
-      padding: 1.35vh;
-      color: #BCBCBC;
+  .contTable {
+    border-radius: 5px;
+    width: 100%;
+    height: 61vh;
 
-      > div {
-        display: flex;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1F1F1F;
+    padding: 1.35vh;
+    padding-top: 0;
+
+    table {
+      text-align: left;
+      width: 100%;
+
+      td {
+        padding: 1.35vh;
+      }
+
+      th {
+        padding: 1.35vh;
+        color: #BCBCBC;
 
         > div {
-          margin-left: 8px;
           display: flex;
-          flex-direction: column;
           align-items: center;
 
-          // Botões de filtros por ordenação
-          button {
-            cursor: pointer;
-            border: 0;
-            background-color: transparent;
-            height: 10px;
+          > div {
+            margin-left: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            // Icones de seta pra cima e para baixo
-            span {
-              font-size: 10px;
-              line-height: 10px;
-
-              &:hover {
-                color: #4189fd;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .c_primaria {
-      color: white;
-    }
-
-    .c_secundaria {
-      color: #4189fd;
-    }
-
-    thead {
-      font-size: 1.5vh;
-      line-height: 1.5vh;
-    }
-
-    tbody {
-      background: #181818;
-      color: #BCBCBC;
-
-      tr {
-        height: 4.12vh;
-        border-radius: 55px;
-
-        font-weight: 700;
-        font-size: 1.54vh;
-        line-height: 100%;
-        border-radius: 5px;
-
-        td {
-          background: #353535;
-
-          div {
-            display: flex;
-            justify-content: space-between;
-
-            * {
-              color: white;
-            }
-
+            // Botões de filtros por ordenação
             button {
               cursor: pointer;
-              border: none;
-              padding: 5px;
-              border-radius: 5px;
-            }
+              border: 0;
+              background-color: transparent;
+              height: 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
 
-            #editButton {
-              background-color: rgb(223, 168, 66);
-              &:hover {
-                background-color: rgb(240, 173, 50);
-              }
-            }
+              // Icones de seta pra cima e para baixo
+              span {
+                font-size: 10px;
+                line-height: 10px;
 
-            #deleteButton {
-              background-color: rgb(223, 66, 66);
-              &:hover {
-                background-color: rgb(240, 50, 50);
+                &:hover {
+                  color: #4189fd;
+                }
               }
             }
           }
         }
       }
 
-      tr:first-child td:first-child { border-top-left-radius: 5px; }
-      tr:first-child td:last-child { border-top-right-radius: 5px; }
-      tr:last-child td:first-child { border-bottom-left-radius: 5px; }
-      tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+      .c_primaria {
+        color: white;
+      }
+
+      .c_secundaria {
+        color: #4189fd;
+      }
+
+      thead {
+        font-size: 1.5vh;
+        line-height: 1.5vh;
+      }
+
+      tbody {
+        background: #181818;
+        color: #BCBCBC;
+
+        tr {
+          height: 4.12vh;
+          border-radius: 55px;
+
+          font-weight: 700;
+          font-size: 1.54vh;
+          line-height: 100%;
+          border-radius: 5px;
+
+          td {
+            background: #353535;
+
+            div {
+              display: flex;
+              justify-content: space-between;
+
+              * {
+                color: white;
+              }
+
+              button {
+                cursor: pointer;
+                border: none;
+                padding: 5px;
+                border-radius: 5px;
+              }
+
+              #editButton {
+                background-color: rgb(223, 168, 66);
+                &:hover {
+                  background-color: rgb(240, 173, 50);
+                }
+              }
+
+              #deleteButton {
+                background-color: rgb(223, 66, 66);
+                &:hover {
+                  background-color: rgb(240, 50, 50);
+                }
+              }
+            }
+          }
+        }
+
+        tr:first-child td:first-child { border-top-left-radius: 5px; }
+        tr:first-child td:last-child { border-top-right-radius: 5px; }
+        tr:last-child td:first-child { border-bottom-left-radius: 5px; }
+        tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+      }
     }
   }
-}
 
-.contLoading {
-  width: max-content;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 70px;
+  .contLoading {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 70px;
+  }
 }

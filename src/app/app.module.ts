@@ -24,6 +24,7 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
@@ -73,6 +74,7 @@ registerLocaleData(en);
     NzBadgeModule,
     NzTableModule,
     NzDividerModule,
+    NzSkeletonModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
