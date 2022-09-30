@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  * {
+    color: white;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  #deleteButton {
+    background-color: rgb(223, 66, 66);
+    &:hover {
+      background-color: rgb(240, 50, 50);
+    }
+  }
+}

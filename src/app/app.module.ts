@@ -22,6 +22,10 @@ import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 
 import { JwtModule } from "@auth0/angular-jwt";
 import { HeaderComponent } from './components/header/header.component';
@@ -31,8 +35,12 @@ import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/b
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { UserDtComponent } from './components/user-dt/user-dt.component';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
-import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
+import { TabelaPessoasComponent } from './pessoas/components/tabela-pessoas/tabela-pessoas.component';
+import { EditPessoaComponent } from './pessoas/components/edit-pessoa/edit-pessoa.component';
+import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete-pessoa.component';
+import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
 
+import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 export function tokenGetter() {
@@ -56,6 +64,10 @@ registerLocaleData(en);
     PessoasComponent,
     UserDtComponent,
     FrequenciaComponent,
+    TabelaPessoasComponent,
+    EditPessoaComponent,
+    DeletePessoaComponent,
+    PostPessoaComponent,
     GraficoComponent,
   ],
   imports: [
@@ -71,6 +83,10 @@ registerLocaleData(en);
     NzCalendarModule,
     NzDropDownModule,
     NzBadgeModule,
+    NzTableModule,
+    NzDividerModule,
+    NzModalModule,
+    NzPopconfirmModule,
     NgxChartsModule,
     JwtModule.forRoot({
       config: {

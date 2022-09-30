@@ -1,0 +1,12 @@
+<button
+  title="Apagar"
+  id="deleteButton"
+  nz-popconfirm
+  nzPopconfirmTitle="Tem certeza que quer remover esse usuário?"
+  (nzOnConfirm)="confirm()"
+  (nzOnCancel)="cancel()"
+  nzPopconfirmPlacement="leftTop"
+  nz-button
+  >
+  <span nz-icon nzType="delete" nzTheme="outline"></span>
+</button>
