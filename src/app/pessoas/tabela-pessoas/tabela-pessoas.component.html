@@ -5,8 +5,8 @@
         <div>
           <span>id</span>
           <div>
-            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
-            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(1, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(1, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
           </div>
         </div>
       </th>
@@ -14,8 +14,8 @@
         <div>
           <span>nome</span>
           <div>
-            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
-            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(2, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(2, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
           </div>
         </div>
       </th>
@@ -23,8 +23,8 @@
         <div>
           <span>email</span>
           <div>
-            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
-            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(3, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(3, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
           </div>
         </div>
       </th>
@@ -32,8 +32,8 @@
         <div>
           <span>tipo</span>
           <div>
-            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
-            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(4, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(4, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
           </div>
         </div>
       </th>
@@ -41,8 +41,8 @@
         <div>
           <span>Data de Cadastro</span>
           <div>
-            <button><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
-            <button><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(5, 1)"><span nz-icon nzType="caret-up" nzTheme="outline"></span></button>
+            <button (click)="changeFiltro(5, 2)"><span nz-icon nzType="caret-down" nzTheme="outline"></span></button>
           </div>
         </div>
       </th>
@@ -51,7 +51,7 @@
       </th>
     </tr>
   </thead>
-  <tbody *ngIf="dataList.length > 0">
+  <tbody *ngIf="!loading">
     <tr *ngFor="let pessoa of dataList">
       <td class="c_secundaria">{{ pessoa.id }}</td>
       <td class="c_primaria">{{ pessoa.nome }}</td>
@@ -70,6 +70,8 @@
       </td>
     </tr>
   </tbody>
-  <span nz-icon [nzType]="'sync'" *ngIf="dataList.length == 0" [nzSpin]="true"></span>
+  <div class="contLoading">
+    <span nz-icon [nzType]="'sync'" *ngIf="loading" [nzSpin]="true"></span>
+  </div>
 </table>
 

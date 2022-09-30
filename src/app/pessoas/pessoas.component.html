@@ -5,7 +5,16 @@
     <p>Aqui você pode ver e cadastrar pessoas</p>
   </app-header>
   <div class="corpo">
-    <!-- <input type="search"> -->
+
+    <div class="contFiltros">
+      <nz-input-group [nzSuffix]="suffixIconSearch">
+        <input type="text" nz-input placeholder="Buscar Pessoas" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <span nz-icon nzType="search"></span>
+      </ng-template>
+    </div>
+
     <app-tabela-pessoas></app-tabela-pessoas>
   </div>
 </main>

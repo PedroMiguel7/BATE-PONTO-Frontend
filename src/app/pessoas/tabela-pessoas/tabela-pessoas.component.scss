@@ -70,7 +70,6 @@
     }
 
     tbody {
-
       background: #181818;
       color: #BCBCBC;
 
@@ -124,4 +123,14 @@
       tr:last-child td:last-child { border-bottom-right-radius: 5px; }
     }
   }
+}
+
+.contLoading {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 70px;
 }
