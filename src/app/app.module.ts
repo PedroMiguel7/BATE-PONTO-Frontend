@@ -39,6 +39,8 @@ import { TabelaPessoasComponent } from './pessoas/components/tabela-pessoas/tabe
 import { EditPessoaComponent } from './pessoas/components/edit-pessoa/edit-pessoa.component';
 import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete-pessoa.component';
 import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
+import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -64,7 +66,8 @@ registerLocaleData(en);
     EditPessoaComponent,
     DeletePessoaComponent,
     PostPessoaComponent,
-    GraficoUserComponent
+    GraficoUserComponent,
+    GraficoComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +86,7 @@ registerLocaleData(en);
     NzDividerModule,
     NzModalModule,
     NzPopconfirmModule,
+    NgxChartsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
