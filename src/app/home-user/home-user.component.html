@@ -7,16 +7,15 @@
         </app-header>
         <div class="corpo">
             <div class="corpo-part1">
-                <section id="contGrafico">
-                    <app-grafico-user> </app-grafico-user>
-                </section>
                 <section id="contPontos">
-                    <app-bate-ponto-user [IDUSER]="user.sum"></app-bate-ponto-user>
+                    <app-bate-ponto-user [IDUSER]="user.sum" [PONTOS]="pontos"></app-bate-ponto-user>
+                </section>
+                <section id="contGrafico">
+                    <app-grafico-user [PONTOS]="pontos"></app-grafico-user>
                 </section>
             </div>
             <div class="corpo-part2">
                 <app-calendario-user></app-calendario-user>
-                <!-- <div class="sectiondate"></div> -->
             </div>
         </div>
     </main>

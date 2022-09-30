@@ -10,11 +10,17 @@ export class HomeUserSsService {
 
   constructor(private httpclient: HttpClient) { }
 
+  token: any = localStorage.getItem("access_token");
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${this.token}` })
+  }
+
   obterTodos(IDUSER:any){
-    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencias/${[IDUSER]}`).toPromise();
+    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencia/${[IDUSER]}`, this.httpOptions).toPromise();
   }
 
   baterPonto(IDUSER:any, ponto: any){
-    return this.httpclient.post<PONTO>(`${API_PATH}/frequencias/${[IDUSER]}`, ponto).toPromise();
+    return this.httpclient.post<PONTO>(`${API_PATH}/frequencia/${[IDUSER]}`, ponto, this.httpOptions).toPromise();
   }
 }

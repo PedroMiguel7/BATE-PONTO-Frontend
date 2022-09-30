@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Color, LegendPosition, ScaleType } from '@swimlane/ngx-charts';
 import { HoursService } from './hours.service';
 
@@ -8,7 +8,7 @@ import { HoursService } from './hours.service';
   styleUrls: ['./grafico-user.component.scss']
 })
 export class GraficoUserComponent implements OnInit {
-
+  @Input() PONTOS!: any;
 
   // options
   legend: boolean = true;
