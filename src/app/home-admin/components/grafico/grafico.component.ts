@@ -10,7 +10,6 @@ import { PointsService } from './points.service';
 })
 export class GraficoComponent implements OnInit {
  
-  view: [ number, number ] = [800, 500];
   below = LegendPosition.Below;
 
   // options

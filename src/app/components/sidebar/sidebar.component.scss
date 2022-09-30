@@ -10,6 +10,9 @@
     flex-direction: column;
     justify-content: space-around;
 
+    .sidebar-nav {
+        list-style: none;
+    }
     .sidebar-nav-item {
         width: 0;
         height: 52px;
@@ -71,15 +74,25 @@
 
 }
 
+.logout-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logout-item-bt {
     background-color: #0062FF;
-    width: 185px;
-    height: 40px;
+    width: 10.71vw;
+    height: 3.58vh;
     border-radius: 10px;
     border: none;
 
     margin-bottom: 10px;
-    margin-left: 3vw;
+    overflow: hidden;
+    white-space: nowrap;
+
+    
 
     .logout-text {
         color: #fff;
@@ -93,9 +106,4 @@
 .sidebar-decoration {
     opacity: 0.2;
     margin-top: 130px;
-}
-
-
-.active {
-    color: red;
 }
