@@ -2,16 +2,13 @@
     background: #1A1A1A;
     transition: all .5s ease;
     z-index: 1;
-    width: 18rem;
+    width: 16vw;
     height: 100vh;
     box-shadow: 4.83811px 0px 19.3525px rgba(0, 0, 6, 0.15);
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-
-
 
     .sidebar-nav-item {
         width: 0;
@@ -22,6 +19,7 @@
         margin-bottom: 15px;
 
         position: relative;
+        top: 172px;
 
         .mini-square {
             position: absolute;
@@ -29,6 +27,7 @@
             height: 52px;
             background: #4D4D4D;
             left: 0;
+            top: -1px;
 
         }
 
@@ -36,7 +35,7 @@
             position: absolute;
             left: 63px;
             top: 15px;
-            color: white;
+            color: #4D4D4D;
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
@@ -45,7 +44,7 @@
         .sidenav-item-icon {
             position: absolute;
             left: 23px;
-            top: 20px;
+            top: 19px;
         }
     }
 
@@ -58,7 +57,7 @@
 
         .mini-square {
             background: #0062FF;
-            left: 279px;
+            left: 15.8vw;
             transition: 0.5s;
         }
 
@@ -70,10 +69,32 @@
         }
     }
 
-    .sidebar-decoration {
-        opacity: 0.2;
+}
+
+.logout-item-bt {
+    background-color: #0062FF;
+    width: 185px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+
+    margin-bottom: 10px;
+    margin-left: 3vw;
+
+    .logout-text {
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 10px;
     }
 }
+
+.sidebar-decoration {
+    opacity: 0.2;
+    margin-top: 130px;
+}
+
 
 .active {
     color: red;
