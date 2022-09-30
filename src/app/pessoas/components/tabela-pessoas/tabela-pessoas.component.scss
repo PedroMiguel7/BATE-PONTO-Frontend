@@ -3,10 +3,12 @@
 
   .contFiltros {
     width: 100%;
+    height: 2.8vh;
     margin-bottom: 1vh;
     display: flex;
 
     * {
+      font-size: 1.5vh;
       color: white;
       background-color: #353535;
       border-radius: 5px;

@@ -1,6 +1,6 @@
 :host {
-  width: 250px;
-  margin-left: 8px;
+  width: 14.47vw;
+  margin-left: 0.46vw;
 
   .btnCadastro {
     width: 100%;
@@ -10,18 +10,21 @@
     align-items: center;
 
     border: none;
-    border-radius: 5px;
-    background-color: #1874FF;
+    border-radius: 0.28vw;
+    transition: .2s;
     cursor: pointer;
+    background-color: #41aa46;
+    font-size: 1.45vh;
 
     * {
       background-color: inherit;
-      font-size: 15px;
+      font-size: 1.45vh;
       font-weight: 700;
     }
 
     &:hover {
-      background-color: var(--azul1);
+      transition: .2s;
+      background-color: #3fa33b;
     }
 
     span + span {
