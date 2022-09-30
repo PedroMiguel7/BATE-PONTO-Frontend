@@ -10,9 +10,9 @@
     flex-direction: column;
     justify-content: space-around;
 
-
-
-
+    .sidebar-nav {
+        list-style: none;
+    }
     .sidebar-nav-item {
         width: 0;
         height: 52px;
@@ -69,12 +69,38 @@
             line-height: 24px;
         }
     }
+}
 
-    .sidebar-decoration {
-        opacity: 0.2;
+.logout-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-item-bt {
+    background-color: #0062FF;
+    width: 10.71vw;
+    height: 3.58vh;
+    border-radius: 10px;
+    border: none;
+
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+
+
+
+    .logout-text {
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 10px;
     }
 }
 
-.active {
-    color: red;
+.sidebar-decoration {
+    opacity: 0.2;
+    margin-top: 130px;
 }

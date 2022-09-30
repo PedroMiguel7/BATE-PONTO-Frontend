@@ -12,4 +12,7 @@ export class SidebarUserComumComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  fazLogout(){    
+    localStorage.removeItem('access_token')
+  }
 }

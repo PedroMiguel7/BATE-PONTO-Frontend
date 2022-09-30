@@ -13,11 +13,15 @@
         <li class="sidebar-nav-item">
             <div class="mini-square"></div>
 
-            <a class="sidebar-item-link" routerLink="/users" routerLinkActive="active">
+                <div class="logout-section">
+                  <button class="logout-item-bt" type="submit" routerLink="/">
+                    <span nz-icon nzType="logout" nzTheme="outline" style="color: #fff; font-size: 20px;"></span>
+                    <span class="logout-text">Logout</span>
+                  </button>
+                </div>
 
                 <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
                 <span class="sidebar-text">Pessoas</span>
-            </a>
         </li>
     </ul>
 
