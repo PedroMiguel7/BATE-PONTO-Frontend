@@ -18,7 +18,4 @@ export class LoginService {
   fazLogin(user: UserModel) {
     return this.HttpClient.post<UserModel>(`${API_PATH}/login/`, user).toPromise()
   }
-  fazLogout(){
-    localStorage.removeItem('access_token')
-  }
 }

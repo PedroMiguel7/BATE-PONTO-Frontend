@@ -2,7 +2,7 @@
     background: #1A1A1A;
     transition: all .5s ease;
     z-index: 1;
-    width: 16vw;
+    width: 18rem;
     height: 100vh;
     box-shadow: 4.83811px 0px 19.3525px rgba(0, 0, 6, 0.15);
 
@@ -22,7 +22,6 @@
         margin-bottom: 15px;
 
         position: relative;
-        top: 172px;
 
         .mini-square {
             position: absolute;
@@ -30,7 +29,6 @@
             height: 52px;
             background: #4D4D4D;
             left: 0;
-            top: -1px;
 
         }
 
@@ -38,7 +36,7 @@
             position: absolute;
             left: 63px;
             top: 15px;
-            color: #4D4D4D;
+            color: white;
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
@@ -47,7 +45,7 @@
         .sidenav-item-icon {
             position: absolute;
             left: 23px;
-            top: 19px;
+            top: 20px;
         }
     }
 
@@ -60,7 +58,7 @@
 
         .mini-square {
             background: #0062FF;
-            left: 15.8vw;
+            left: 279px;
             transition: 0.5s;
         }
 
@@ -92,7 +90,7 @@
     overflow: hidden;
     white-space: nowrap;
 
-    
+
 
     .logout-text {
         color: #fff;

@@ -1,51 +1,28 @@
 <div class="sidebar">
-  <ul class="sidebar-nav">
-    <li
-      class="sidebar-nav-item"
-      routerLink="/home-adm"
-      routerLinkActive="active"
-    >
-      <div class="mini-square"></div>
 
-      <a class="sidebar-item-link">
-        <span
-          nz-icon
-          nzType="home"
-          nzTheme="fill"
-          style="color: #4d4d4d; font-size: 20px"
-          class="sidenav-item-icon"
-        ></span>
-        <span class="sidebar-text">Home</span>
-      </a>
-    </li>
-    <li class="sidebar-nav-item">
-      <div class="mini-square"></div>
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-item" routerLink="/home-adm" routerLinkActive="active">
+            <div class="mini-square"></div>
 
-      <a
-        class="sidebar-item-link"
-        routerLink="/users"
-        routerLinkActive="active"
-      >
-        <span
-          nz-icon
-          nzType="team"
-          nzTheme="outline"
-          style="color: #4d4d4d; font-size: 20px"
-          class="sidenav-item-icon"
-        ></span>
-        <span class="sidebar-text">Pessoas</span>
-      </a>
-    </li>
-  </ul>
+            <a class="sidebar-item-link">
+
+                <span nz-icon nzType="home" nzTheme="fill" style="color: #4D4D4D" class="sidenav-item-icon"></span>
+                <span class="sidebar-text">Home</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <div class="mini-square"></div>
+
+            <div class="logout-section">
+              <button class="logout-item-bt" type="submit" routerLink="/" (click)="fazLogout()">
+                <span nz-icon nzType="logout" nzTheme="outline" style="color: #fff; font-size: 20px;"></span>
+                <span class="logout-text">Logout</span>
+              </button>
+            </div>
+        </li>
+    </ul>
+
     <div class="sidebar-decoration">
-        <img src="../../../assets/Logo.svg" alt="" />
+        <img src="../../../assets/Logo.svg" alt="">
     </div>
-
-  <div class="logout-section">
-    <button class="logout-item-bt" type="submit" routerLink="/" (click)="fazLogout()">
-      <span nz-icon nzType="logout" nzTheme="outline" style="color: #fff; font-size: 20px;"></span>
-      <span class="logout-text">Logout</span>
-    </button>
-  </div>
-
 </div>
