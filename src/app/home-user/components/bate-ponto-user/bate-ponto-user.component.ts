@@ -1,7 +1,5 @@
 import { HomeUserSsService } from './../../home-user-ss.service';
 import { Component, OnInit, Input  } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { PONTO } from './bate-ponto-user.interface';
 
 @Component({
   selector: 'app-bate-ponto-user',

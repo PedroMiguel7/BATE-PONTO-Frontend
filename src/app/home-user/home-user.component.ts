@@ -41,23 +41,27 @@ export class HomeUserComponent implements OnInit {
   loading: boolean = false
   user: user = {}
 
-  ngOnInit(): void {
-    const token: any = localStorage.getItem("access_token");
-    const helper = new JwtHelperService();
-    const decodedToken = helper.decodeToken(token);
-    this.user = decodedToken
-  }
-
+  
   batendoPonto(IDUSER: any) {
     this.loading = true
     this.HomeUserSsService.baterPonto(IDUSER, this.ponto)
-      .then(pontos => console.log(pontos))
+    .then(pontos => console.log(pontos))
       .catch(err => console.log(err))
-  }
-
-  getPonto(IDUSER: PONTO[]) {
-    this.HomeUserSsService.obterTodos(IDUSER)
+    }
+    
+    getPonto(IDUSER: any) {
+      this.HomeUserSsService.obterTodos(IDUSER)
       .then(pontos => this.pontos = pontos)
       .catch(err => console.log(err))
-  }
+    }
+    
+    ngOnInit(): void {
+      const token: any = localStorage.getItem("access_token");
+      const helper = new JwtHelperService();
+      const decodedToken = helper.decodeToken(token);
+      this.user = decodedToken  
+  
+      this.getPonto(decodedToken.sum)
+    }
+
 }

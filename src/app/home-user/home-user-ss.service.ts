@@ -17,10 +17,10 @@ export class HomeUserSsService {
   }
 
   obterTodos(IDUSER:any){
-    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencias/${[IDUSER]}`, this.httpOptions).toPromise();
+    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencia/${[IDUSER]}`, this.httpOptions).toPromise();
   }
 
   baterPonto(IDUSER:any, ponto: any){
-    return this.httpclient.post<PONTO>(`${API_PATH}/frequencias/${[IDUSER]}`, ponto, this.httpOptions).toPromise();
+    return this.httpclient.post<PONTO>(`${API_PATH}/frequencia/${[IDUSER]}`, ponto, this.httpOptions).toPromise();
   }
 }
