@@ -1,0 +1,44 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  background: #1D2637;
+
+  display: flex;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+
+  #header {
+    h1 {
+      font-weight: 700;
+      font-size: 4vh;
+      line-height: 3vh;
+      color: #FFFFFF;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 2vh;
+      line-height: 2vh;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 79.41vh;
+  width: 95%;
+  background-color: #191919;
+  border-radius: 0.44vh;
+
+  margin-top: 2.69vh;
+  margin-left: 2.03vw;
+
+  padding: 1.79vh;
+}
