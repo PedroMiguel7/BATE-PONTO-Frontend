@@ -3,7 +3,8 @@
   class="alert"
   nzBanner
   [nzType]="alert.type"
-  [nzMessage]="alert.message">
+  [nzMessage]="alert.message"
+>
 </nz-alert>
 
 <div id="main">
@@ -17,7 +18,8 @@
           type="text"
           [(ngModel)]="user.email"
           formControlName="email"
-          required />
+          required
+        />
         <span>Email</span>
       </label>
 
@@ -27,18 +29,20 @@
           type="password"
           [(ngModel)]="user.senha"
           formControlName="senha"
-          required />
+          required
+        />
         <span>Senha</span>
       </label>
 
       <label class="ipt_check">
-        <input type="checkbox" class="ipt_check">
+        <input type="checkbox" class="ipt_check" />
         <span>Manter Conectado</span>
       </label>
 
       <button (click)="fazLogin()" type="submit" class="ipt_submit">
         <span *ngIf="loading" nz-icon [nzType]="'sync'" [nzSpin]="true"></span>
-        <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span> LOGIN
+        <span *ngIf="!loading" nz-icon nzType="login" nzTheme="outline"></span>
+        LOGIN
       </button>
     </form>
   </section>

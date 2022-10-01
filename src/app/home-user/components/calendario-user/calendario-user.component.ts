@@ -3,18 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-calendario-user',
   templateUrl: './calendario-user.component.html',
-  styleUrls: ['./calendario-user.component.scss']
+  styleUrls: ['./calendario-user.component.scss'],
 })
 export class CalendarioUserComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   listDataMap = {
-    eight: [
-      { type: 'warning', content: `teste` },
-    ]
+    eight: [{ type: 'warning', content: `teste` }],
   };
 }

@@ -7,14 +7,16 @@
   font-family: 'Inter', sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --azul1: #0B68FB;
+  --azul1: #0b68fb;
   --azul2: #154dda;
 }
 
@@ -45,7 +47,8 @@ label {
     background: none;
     height: 100%;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: var(--azul1);
     }
   }
@@ -62,7 +65,8 @@ label {
     background-color: inherit;
   }
 
-  input:focus ~ span, input:valid ~ span {
+  input:focus ~ span,
+  input:valid ~ span {
     top: -0.5rem;
     font-size: 12px;
     left: 0.8rem;
@@ -81,7 +85,6 @@ label {
   }
 }
 
-
 // Inputs do tipo submit
 .ipt_submit {
   background-color: var(--azul1);
@@ -89,17 +92,16 @@ label {
   padding: 10px;
   font-weight: bold;
   border-radius: 5px;
-  transition: .2s;
+  transition: 0.2s;
 
   &:hover {
     background-color: var(--azul2);
-    transition: .2s;
+    transition: 0.2s;
   }
 
   border: none;
   width: 100%;
 }
-
 
 // Inputs do tipo checkbox
 .ipt_check {
@@ -124,12 +126,12 @@ label {
     display: inline-block;
 
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       vertical-align: middle;
       height: 1.5em;
       width: 1.5em;
-      background: #FFF;
+      background: #fff;
       margin-right: 0.5em;
       border: 1px solid #999;
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -141,19 +143,20 @@ label {
     }
 
     &::after {
-      content: "\2713";
+      content: '\2713';
       position: absolute;
       top: 50%;
       left: 0.75em;
       transform: translate(-50%, -50%);
       font-size: 1em;
-      color: #FFF;
+      color: #fff;
       opacity: 0;
       transition: all 0.1s ease;
     }
 
-    &:focus::before, &:hover::before {
-      background: #DDD;
+    &:focus::before,
+    &:hover::before {
+      background: #ddd;
     }
   }
 
@@ -167,8 +170,6 @@ label {
   }
 }
 
-
-
 // Estilização do Calendário
 
 .ant-picker-calendar * {
@@ -181,7 +182,8 @@ label {
   color: rgba(255, 255, 255, 0.2);
 
   // COR DA LETRA DOS SELECTS DO TOPO DO CALENDÁRIO
-  .ant-select-selection-item, .ant-radio-group span {
+  .ant-select-selection-item,
+  .ant-radio-group span {
     color: white !important;
   }
 
@@ -215,16 +217,18 @@ label {
           height: 100% !important;
         }
 
-        &:hover, &:hover * {
+        &:hover,
+        &:hover * {
           background-color: #333 !important;
-          transition-duration: .2s;
+          transition-duration: 0.2s;
         }
       }
     }
   }
 
   // COR DAS DATAS QUE ESTÃO NO MÊS (DIA 01 - 31)
-  .ant-picker-cell-in-view *, th {
+  .ant-picker-cell-in-view *,
+  th {
     color: white;
   }
 
@@ -243,7 +247,8 @@ label {
     border-radius: 50%;
   }
 
-  .ant-picker-content .ng-star-inserted tr .ng-star-inserted:first-child, .ant-picker-content .ng-star-inserted tr .ng-star-inserted:last-child {
+  .ant-picker-content .ng-star-inserted tr .ng-star-inserted:first-child,
+  .ant-picker-content .ng-star-inserted tr .ng-star-inserted:last-child {
     color: var(--azul1) !important;
   }
 

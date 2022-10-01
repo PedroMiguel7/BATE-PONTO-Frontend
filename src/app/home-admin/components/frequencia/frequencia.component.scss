@@ -20,7 +20,7 @@
       font-weight: 700;
       font-size: 2.78vh;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       height: 2.78vh;
     }
 
@@ -61,9 +61,8 @@
       }
     }
 
-
     #contTable {
-      background: #1F1F1F;
+      background: #1f1f1f;
       border-radius: 5px;
       width: 100%;
       height: 61vh;
@@ -77,8 +76,8 @@
         padding: 1.35vh;
         padding-top: 0;
 
-        border-collapse:separate;
-        border-spacing: 0 .89vh;
+        border-collapse: separate;
+        border-spacing: 0 0.89vh;
 
         td {
           padding: 1.35vh;
@@ -93,15 +92,15 @@
         }
 
         .c_secundaria {
-          color: #BCBCBC;
+          color: #bcbcbc;
         }
 
         .c_entrada {
-          color:#29C16E;
+          color: #29c16e;
         }
 
         .c_saida {
-          color: #EF3C56;
+          color: #ef3c56;
         }
 
         thead {
@@ -124,14 +123,21 @@
             }
 
             // Deixando a borda do tr arredondada
-            td:first-child { border-top-left-radius: 10px; }
-            td:last-child { border-top-right-radius: 10px; }
-            td:first-child { border-bottom-left-radius: 10px; }
-            td:last-child { border-bottom-right-radius: 10px; }
+            td:first-child {
+              border-top-left-radius: 10px;
+            }
+            td:last-child {
+              border-top-right-radius: 10px;
+            }
+            td:first-child {
+              border-bottom-left-radius: 10px;
+            }
+            td:last-child {
+              border-bottom-right-radius: 10px;
+            }
           }
         }
       }
     }
   }
 }
-

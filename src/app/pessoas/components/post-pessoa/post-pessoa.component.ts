@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-post-pessoa',
   templateUrl: './post-pessoa.component.html',
-  styleUrls: ['./post-pessoa.component.scss']
+  styleUrls: ['./post-pessoa.component.scss'],
 })
 export class PostPessoaComponent implements OnInit {
   isVisible = false;
@@ -24,7 +24,5 @@ export class PostPessoaComponent implements OnInit {
     this.isVisible = false;
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

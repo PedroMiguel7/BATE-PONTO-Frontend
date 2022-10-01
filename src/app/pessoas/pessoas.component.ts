@@ -5,13 +5,10 @@ import { PessoasService } from './pessoas.service';
 @Component({
   selector: 'app-pessoas',
   templateUrl: './pessoas.component.html',
-  styleUrls: ['./pessoas.component.scss']
+  styleUrls: ['./pessoas.component.scss'],
 })
 export class PessoasComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 }

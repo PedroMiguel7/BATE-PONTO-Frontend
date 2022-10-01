@@ -1,22 +1,22 @@
 <div class="section">
-    <h2>HISTÓRICO DE PONTOS BATIDOS</h2>
-    <div class="chart">
-        <ngx-charts-bar-vertical-2d
-        [scheme]="colorScheme"
-        [legend]="legend"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [xAxis]="xAxis"
-        [yAxis]="yAxis"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel"
-        [results]="multi"
-        (select)="onSelect($event)"
-        (activate)="onActivate($event)"
-        (deactivate)="onDeactivate($event)"
-        [legendPosition]="below"  
-        [gradient]="gradient"  
-        >
+  <h2>HISTÓRICO DE PONTOS BATIDOS</h2>
+  <div class="chart">
+    <ngx-charts-bar-vertical-2d
+      [scheme]="colorScheme"
+      [legend]="legend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [results]="multi"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+      [legendPosition]="below"
+      [gradient]="gradient"
+    >
     </ngx-charts-bar-vertical-2d>
-    </div>
+  </div>
 </div>

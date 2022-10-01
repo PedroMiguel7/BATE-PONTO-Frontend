@@ -7,15 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 
 const routes: Routes = [
-  { path: "", component: LoginComponent },
-  { path: "home-adm", component: HomeAdminComponent },
-  { path: "home-user", component: HomeUserComponent },
-  { path: "users", component: PessoasComponent },
-  {path: "users/:id", component: UserDtComponent}
+  { path: '', component: LoginComponent },
+  { path: 'home-adm', component: HomeAdminComponent },
+  { path: 'home-user', component: HomeUserComponent },
+  { path: 'users', component: PessoasComponent },
+  { path: 'users/:id', component: UserDtComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

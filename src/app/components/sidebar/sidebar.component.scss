@@ -1,6 +1,6 @@
 .sidebar {
-  background: #1A1A1A;
-  transition: all .5s ease;
+  background: #1a1a1a;
+  transition: all 0.5s ease;
   z-index: 1;
   width: 16vw;
   height: 100vh;
@@ -11,71 +11,68 @@
   justify-content: space-around;
 
   .sidebar-nav {
-      list-style: none;
+    list-style: none;
   }
   .sidebar-nav-item {
-      width: 0;
+    width: 0;
+    height: 52px;
+    border-top: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+
+    margin-bottom: 15px;
+
+    position: relative;
+    top: 172px;
+
+    .mini-square {
+      position: absolute;
+      width: 6px;
       height: 52px;
-      border-top: 1px solid #4D4D4D;
-      border-bottom: 1px solid #4D4D4D;
+      background: #4d4d4d;
+      left: 0;
+      top: -1px;
+    }
 
-      margin-bottom: 15px;
+    .sidebar-text {
+      position: absolute;
+      left: 63px;
+      top: 15px;
+      color: #4d4d4d;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
 
-      position: relative;
-      top: 172px;
-
-      .mini-square {
-          position: absolute;
-          width: 6px;
-          height: 52px;
-          background: #4D4D4D;
-          left: 0;
-          top: -1px;
-
-      }
-
-      .sidebar-text {
-          position: absolute;
-          left: 63px;
-          top: 15px;
-          color: #4D4D4D;
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 24px;
-      }
-
-      .sidenav-item-icon {
-          position: absolute;
-          left: 23px;
-          top: 19px;
-      }
+    .sidenav-item-icon {
+      position: absolute;
+      left: 23px;
+      top: 19px;
+    }
   }
-
 
   .sidebar-nav-item:hover {
-      width: 100%;
-      border-top: 1px solid #0062FF;
-      border-bottom: 1px solid #0062FF;
-      transition: all 0.5s ease;
+    width: 100%;
+    border-top: 1px solid #0062ff;
+    border-bottom: 1px solid #0062ff;
+    transition: all 0.5s ease;
 
-      .mini-square {
-          background: #0062FF;
-          left: 15.8vw;
-          transition: 0.5s;
-      }
+    .mini-square {
+      background: #0062ff;
+      left: 15.8vw;
+      transition: 0.5s;
+    }
 
-      .sidebar-text {
-          color: #0062FF;
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 24px;
-      }
+    .sidebar-text {
+      color: #0062ff;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
-
 }
 
 .active {
-    background: red;
+  background: red;
 }
 .logout-section {
   width: 100%;
@@ -85,7 +82,7 @@
 }
 
 .logout-item-bt {
-  background-color: #0062FF;
+  background-color: #0062ff;
   width: 10.71vw;
   height: 3.58vh;
   border-radius: 10px;
@@ -95,14 +92,12 @@
   overflow: hidden;
   white-space: nowrap;
 
-
-
   .logout-text {
-      color: #fff;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
-      padding-left: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 10px;
   }
 }
 

@@ -8,9 +8,8 @@ describe('HomeAdminComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeAdminComponent ]
-    })
-    .compileComponents();
+      declarations: [HomeAdminComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HomeAdminComponent);
     component = fixture.componentInstance;

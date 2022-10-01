@@ -5,7 +5,7 @@ import { HoursService } from './hours.service';
 @Component({
   selector: 'app-grafico-user',
   templateUrl: './grafico-user.component.html',
-  styleUrls: ['./grafico-user.component.scss']
+  styleUrls: ['./grafico-user.component.scss'],
 })
 export class GraficoUserComponent implements OnInit {
   @Input() PONTOS!: any;
@@ -22,26 +22,18 @@ export class GraficoUserComponent implements OnInit {
   yAxisLabel: string = 'Hours';
   timeline: boolean = true;
 
- 
-  colorScheme: Color = { 
+  colorScheme: Color = {
     name: 'vivid',
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: [
-      '#1A75FF ',
-      '#2196f3',
-      '#0026e9',
-      '#81c9fa',
-    ]
-};
+    domain: ['#1A75FF ', '#2196f3', '#0026e9', '#81c9fa'],
+  };
 
+  constructor(private HoursService: HoursService) {}
 
-  constructor( private HoursService: HoursService) {}
-
-  get multi (){
+  get multi() {
     return this.HoursService.hoursData;
   }
-   
 
   onSelect(data: any): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
@@ -55,5 +47,5 @@ export class GraficoUserComponent implements OnInit {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

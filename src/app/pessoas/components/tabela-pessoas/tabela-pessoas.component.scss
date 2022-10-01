@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1F1F1F;
+    background: #1f1f1f;
     padding: 1.35vh;
     padding-top: 0;
 
@@ -38,7 +38,7 @@
 
       th {
         padding: 1.35vh;
-        color: #BCBCBC;
+        color: #bcbcbc;
 
         > div {
           display: flex;
@@ -89,7 +89,7 @@
 
       tbody {
         background: #181818;
-        color: #BCBCBC;
+        color: #bcbcbc;
 
         tr {
           height: 4.12vh;
@@ -110,10 +110,18 @@
           }
         }
 
-        tr:first-child td:first-child { border-top-left-radius: 5px; }
-        tr:first-child td:last-child { border-top-right-radius: 5px; }
-        tr:last-child td:first-child { border-bottom-left-radius: 5px; }
-        tr:last-child td:last-child { border-bottom-right-radius: 5px; }
+        tr:first-child td:first-child {
+          border-top-left-radius: 5px;
+        }
+        tr:first-child td:last-child {
+          border-top-right-radius: 5px;
+        }
+        tr:last-child td:first-child {
+          border-bottom-left-radius: 5px;
+        }
+        tr:last-child td:last-child {
+          border-bottom-right-radius: 5px;
+        }
       }
     }
   }

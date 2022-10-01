@@ -3,16 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidebar-user-comum',
   templateUrl: './sidebar-user-comum.component.html',
-  styleUrls: ['./sidebar-user-comum.component.scss']
+  styleUrls: ['./sidebar-user-comum.component.scss'],
 })
 export class SidebarUserComumComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  fazLogout(){    
-    localStorage.removeItem('access_token')
+  fazLogout() {
+    localStorage.removeItem('access_token');
   }
 }

@@ -1,8 +1,8 @@
 export interface user {
-  sum?: "",
-  tipo?: "",
-  nome?: "",
-  exp?: "",
-  iat?: "",
-  iss?: ""
+  sum?: '';
+  tipo?: '';
+  nome?: '';
+  exp?: '';
+  iat?: '';
+  iss?: '';
 }

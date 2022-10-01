@@ -1,77 +1,77 @@
 .container {
-    position: relative;
-    height: 100%;
-    width: 100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 h2 {
-    font-weight: 700;
-    font-size: 2.69vh;
-    color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.69vh;
+  color: #ffffff;
 }
 
 .contTable {
-    height: 24.17vh;
-    overflow-y: scroll;
+  height: 24.17vh;
+  overflow-y: scroll;
 }
 
 table {
+  width: 100%;
+  padding: 10px;
+
+  tr {
+    background-color: #1f1f1f;
+    border-radius: 10px;
     width: 100%;
-    padding: 10px;
+    height: 47px;
+    padding: 5px;
 
-    tr {
-        background-color: #1f1f1f;
-        border-radius: 10px;
-        width: 100%;
-        height: 47px;
-        padding: 5px;
+    display: flex;
+    align-items: center;
 
-        display: flex;
-        align-items: center;
+    #contBolinha {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3%;
 
-        #contBolinha {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 3%;
-            
-            .circ {
-                border-radius: 50%;
-                width: 15px;
-                height: 15px;
-            }
+      .circ {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+      }
 
-            .pontos-circulo-entrada{
-                background-color: #ade84c;
-            }
+      .pontos-circulo-entrada {
+        background-color: #ade84c;
+      }
 
-            .pontos-circulo-saida{
-                background-color: #e84c4c;
-            }
-        }
-
-        #hora {
-            padding-left: 15px;
-            color: white;
-            font-size: 18px;
-            width: 13%;
-        }
-
-        #data {
-            padding-left: 6px;
-            color: #949494;
-            font-size: 14px;
-        }
+      .pontos-circulo-saida {
+        background-color: #e84c4c;
+      }
     }
 
-    .ponto + .ponto{
-        margin-top: 10px;
+    #hora {
+      padding-left: 15px;
+      color: white;
+      font-size: 18px;
+      width: 13%;
     }
+
+    #data {
+      padding-left: 6px;
+      color: #949494;
+      font-size: 14px;
+    }
+  }
+
+  .ponto + .ponto {
+    margin-top: 10px;
+  }
 }
 
 .ipt_submit {
-    font-size: 15px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }

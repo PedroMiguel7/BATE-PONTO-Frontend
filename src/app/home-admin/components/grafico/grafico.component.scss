@@ -1,27 +1,27 @@
 h2 {
-    font-weight: 700;
-    font-size: 2.69vh;
-    color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.69vh;
+  color: #ffffff;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-::ng-deep .ngx-charts { 
-    text{
-        fill: #fff!important; 
-    }
+::ng-deep .ngx-charts {
+  text {
+    fill: #fff !important;
+  }
 }
 
 ::ng-deep .chart-legend {
-    color: white!important;
+  color: white !important;
 }
 
 ::ng-deep .chart-legend > div {
-    margin-left: 2vw;
+  margin-left: 2vw;
 }
 
 .chart-size {
-    width: 36.64vw;
-    height: 29.98vh;
+  width: 36.64vw;
+  height: 29.98vh;
 }

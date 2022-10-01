@@ -7,18 +7,14 @@ import { navbarData } from './navData';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-
   navData = navbarData;
   userTipo: number = 1;
 
   fazLogout() {
-    localStorage.removeItem("access_token")
+    localStorage.removeItem('access_token');
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 }

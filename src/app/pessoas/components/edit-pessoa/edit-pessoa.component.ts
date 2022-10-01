@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-edit-pessoa',
   templateUrl: './edit-pessoa.component.html',
-  styleUrls: ['./edit-pessoa.component.scss']
+  styleUrls: ['./edit-pessoa.component.scss'],
 })
 export class EditPessoaComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
   isVisible = false;
   isOkLoading = false;
@@ -26,7 +26,6 @@ export class EditPessoaComponent implements OnInit {
       this.isOkLoading = false;
     }, 3000);
   }
-  
-  ngOnInit(): void {
-  }
+
+  ngOnInit(): void {}
 }

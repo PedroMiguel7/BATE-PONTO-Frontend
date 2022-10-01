@@ -8,9 +8,8 @@ describe('GraficoUserComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GraficoUserComponent ]
-    })
-    .compileComponents();
+      declarations: [GraficoUserComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GraficoUserComponent);
     component = fixture.componentInstance;

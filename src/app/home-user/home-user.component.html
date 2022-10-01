@@ -1,22 +1,25 @@
 <div id="main">
-    <app-sidebar-user-comum></app-sidebar-user-comum>
-    <main>
-        <app-header id="header">
-          <h1>Hello, {{ user.nome }}!</h1>
-          <p>Bate o ponto ai meliante</p>
-        </app-header>
-        <div class="corpo">
-            <div class="corpo-part1">
-                <section id="contPontos">
-                    <app-bate-ponto-user [IDUSER]="user.sum" [PONTOS]="pontos"></app-bate-ponto-user>
-                </section>
-                <section id="contGrafico">
-                    <app-grafico-user [PONTOS]="pontos"></app-grafico-user>
-                </section>
-            </div>
-            <div class="corpo-part2">
-                <app-calendario-user></app-calendario-user>
-            </div>
-        </div>
-    </main>
+  <app-sidebar-user-comum></app-sidebar-user-comum>
+  <main>
+    <app-header id="header">
+      <h1>Hello, {{ user.nome }}!</h1>
+      <p>Bate o ponto ai meliante</p>
+    </app-header>
+    <div class="corpo">
+      <div class="corpo-part1">
+        <section id="contPontos">
+          <app-bate-ponto-user
+            [IDUSER]="user.sum"
+            [PONTOS]="pontos"
+          ></app-bate-ponto-user>
+        </section>
+        <section id="contGrafico">
+          <app-grafico-user [PONTOS]="pontos"></app-grafico-user>
+        </section>
+      </div>
+      <div class="corpo-part2">
+        <app-calendario-user></app-calendario-user>
+      </div>
+    </div>
+  </main>
 </div>

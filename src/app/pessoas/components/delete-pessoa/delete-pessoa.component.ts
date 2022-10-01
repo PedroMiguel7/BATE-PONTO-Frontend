@@ -3,21 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-delete-pessoa',
   templateUrl: './delete-pessoa.component.html',
-  styleUrls: ['./delete-pessoa.component.scss']
+  styleUrls: ['./delete-pessoa.component.scss'],
 })
 export class DeletePessoaComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+  cancel(): void {}
 
-  cancel(): void {
-
-  }
-
-  confirm(): void {
-
-  }
-
+  confirm(): void {}
 }

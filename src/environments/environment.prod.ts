@@ -1,5 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
 };
 
-export const API_PATH = "https://app-ponto-aprendizes.herokuapp.com"
+export const API_PATH = 'https://app-ponto-aprendizes.herokuapp.com';

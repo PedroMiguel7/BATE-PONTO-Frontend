@@ -5,18 +5,16 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 @Component({
   selector: 'app-home-admin',
   templateUrl: './home-admin.component.html',
-  styleUrls: ['./home-admin.component.scss']
+  styleUrls: ['./home-admin.component.scss'],
 })
 export class HomeAdminComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  user : user = {}
+  user: user = {};
   ngOnInit(): void {
-    const token: any = localStorage.getItem("access_token");
+    const token: any = localStorage.getItem('access_token');
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(token);
-    this.user = decodedToken
+    this.user = decodedToken;
   }
-
 }
