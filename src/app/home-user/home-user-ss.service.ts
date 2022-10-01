@@ -1,14 +1,12 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { API_PATH } from 'src/environments/environment.prod';
-import { PONTO } from './bate-ponto-user.interface';
+import { PONTO } from './components/bate-ponto-user/bate-ponto-user.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PontosUserService {
-
-  // não usando 
+export class HomeUserSsService {
 
   constructor(private httpclient: HttpClient) { }
 
@@ -17,12 +15,12 @@ export class PontosUserService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${this.token}` })
   }
-  
+
   obterTodos(IDUSER:any){
-    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencia/lista?orderBy=nome&order=asc&data=2022-09-29${[IDUSER]}`, this.httpOptions).toPromise();
+    return this.httpclient.get<PONTO[]>(`${API_PATH}/frequencia/${[IDUSER]}`, this.httpOptions).toPromise();
   }
 
   baterPonto(IDUSER:any, ponto: any){
-    return this.httpclient.post<PONTO>(`${API_PATH}/frequencias/${[IDUSER]}`, ponto, this.httpOptions).toPromise();
+    return this.httpclient.post<PONTO>(`${API_PATH}/frequencia/${[IDUSER]}`, ponto, this.httpOptions).toPromise();
   }
 }

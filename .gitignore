@@ -11,6 +11,7 @@
 npm-debug.log
 yarn-error.log
 package-lock.json
+yarn.lock
 
 # IDEs and editors
 .idea/
@@ -20,6 +21,7 @@ package-lock.json
 *.launch
 .settings/
 *.sublime-workspace
+.prettierignore
 
 # Visual Studio Code
 .vscode/*
