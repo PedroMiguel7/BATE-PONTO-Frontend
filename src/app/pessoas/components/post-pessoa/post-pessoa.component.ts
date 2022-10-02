@@ -1,4 +1,7 @@
+import { PessoasService } from './../../pessoas.service';
 import { Component, OnInit } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 
 @Component({
   selector: 'app-post-pessoa',
@@ -7,22 +10,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPessoaComponent implements OnInit {
   isVisible = false;
+  isOkLoading = false;
+  pwdVisible = false
+  pwdConfirmVisible = false
 
-  constructor() {}
+  constructor(private fb: UntypedFormBuilder, private PessoaService: PessoasService) {}
 
   showModal(): void {
     this.isVisible = true;
   }
 
-  handleOk(): void {
-    console.log('Button ok clicked!');
-    this.isVisible = false;
-  }
-
   handleCancel(): void {
-    console.log('Button cancel clicked!');
     this.isVisible = false;
   }
 
-  ngOnInit(): void {}
+  validateForm!: UntypedFormGroup;
+
+  submitForm(): void {
+    this.isOkLoading = true;
+
+    if (this.validateForm.valid) {
+      this.PessoaService.postPessoa(this.validateForm.value)
+                        .then((res) => console.log(res))
+                        .catch((err) => console.error(err))
+    } else {
+      Object.values(this.validateForm.controls).forEach(control => {
+        if (control.invalid) {
+          control.markAsDirty();
+          control.updateValueAndValidity({ onlySelf: true });
+        }
+      });
+      this.isOkLoading = false;
+    }
+  }
+
+  ngOnInit(): void {
+    this.validateForm = this.fb.group({
+      Nome: [null, [Validators.required]],
+      Email: [null, [Validators.required]],
+      Senha: [null, [Validators.required]],
+      Confirmacao: [null, [Validators.required]],
+      Tipo: [null, [Validators.required]]
+    });
+  }
 }

@@ -16,6 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
@@ -86,6 +89,9 @@ registerLocaleData(en);
     NzDividerModule,
     NzModalModule,
     NzPopconfirmModule,
+    NzFormModule,
+    NzButtonModule,
+    NzSelectModule,
     NgxChartsModule,
     JwtModule.forRoot({
       config: {
