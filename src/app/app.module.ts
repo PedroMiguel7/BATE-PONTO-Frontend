@@ -42,6 +42,7 @@ import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete
 import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
 import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
 import { Error404Component } from './error404/error404.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -97,7 +98,7 @@ registerLocaleData(en);
       },
     }),
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, AuthGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
