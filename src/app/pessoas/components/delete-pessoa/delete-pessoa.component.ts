@@ -1,5 +1,5 @@
 import { PessoasService } from './../../pessoas.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pessoa } from '../../pessoas.interface';
 
 @Component({
@@ -9,6 +9,8 @@ import { Pessoa } from '../../pessoas.interface';
 })
 export class DeletePessoaComponent implements OnInit {
   @Input() pessoa: Pessoa | any = {}
+  @Output() update = new EventEmitter<any>();
+
   constructor(private PessoasService: PessoasService) {}
 
   ngOnInit(): void {}
@@ -20,7 +22,7 @@ export class DeletePessoaComponent implements OnInit {
   deletePessoa(){
     this.PessoasService
                     .deletePessoa(this.pessoa.id)
-                    .then((res) => console.log(res))
+                    .then((res) => this.update.emit(null))
                     .catch((err) => console.error(err))
   }
 }

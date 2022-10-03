@@ -6,7 +6,7 @@
     <span nz-icon nzType="search"></span>
   </ng-template>
 
-  <app-post-pessoa></app-post-pessoa>
+  <app-post-pessoa (update)="getPessoas()"></app-post-pessoa>
 </div>
 
 <div class="contTable">
@@ -152,8 +152,8 @@
         <td>{{ pessoa.created_at }}</td>
         <td>
           <div>
-            <app-edit-pessoa></app-edit-pessoa>
-            <app-delete-pessoa [pessoa]="pessoa"></app-delete-pessoa>
+            <app-edit-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-edit-pessoa>
+            <app-delete-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-delete-pessoa>
           </div>
         </td>
       </tr>

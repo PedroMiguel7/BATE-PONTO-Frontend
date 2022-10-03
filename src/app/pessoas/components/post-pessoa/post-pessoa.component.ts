@@ -1,5 +1,5 @@
 import { PessoasService } from './../../pessoas.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 
@@ -9,6 +9,8 @@ import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
   styleUrls: ['./post-pessoa.component.scss'],
 })
 export class PostPessoaComponent implements OnInit {
+  @Output() update = new EventEmitter<any>();
+
   isVisible = false;
   isOkLoading = false;
   pwdVisible = false
@@ -31,7 +33,11 @@ export class PostPessoaComponent implements OnInit {
 
     if (this.validateForm.valid) {
       this.PessoaService.postPessoa(this.validateForm.value)
-                        .then((res) => console.log(res))
+                        .then((res) => {
+                          this.isOkLoading = false;
+                          this.isVisible = false;
+                          this.update.emit(null)
+                        })
                         .catch((err) => console.error(err))
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
