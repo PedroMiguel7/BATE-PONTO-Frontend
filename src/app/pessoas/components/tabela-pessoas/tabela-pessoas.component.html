@@ -1,6 +1,12 @@
 <div class="contFiltros">
   <nz-input-group [nzSuffix]="suffixIconSearch">
-    <input type="text" nz-input placeholder="Buscar Pessoas" />
+    <input
+      type="text"
+      nz-input
+      placeholder="Buscar Pessoas"
+      autocomplete="off"
+      [(ngModel)]="search"
+    />
   </nz-input-group>
   <ng-template #suffixIconSearch>
     <span nz-icon nzType="search"></span>
@@ -144,7 +150,7 @@
       </tr>
     </thead>
     <tbody *ngIf="!loading">
-      <tr *ngFor="let pessoa of dataList">
+      <tr *ngFor="let pessoa of dataList | filter:search">
         <td class="c_secundaria">{{ pessoa.id }}</td>
         <td class="c_primaria">{{ pessoa.nome }}</td>
         <td>{{ pessoa.email }}</td>
