@@ -6,7 +6,7 @@
     <span nz-icon nzType="search"></span>
   </ng-template>
 
-  <app-post-pessoa></app-post-pessoa>
+  <app-post-pessoa (update)="getPessoas()"></app-post-pessoa>
 </div>
 
 <div class="contTable">
@@ -18,10 +18,22 @@
             <span>id</span>
             <div>
               <button (click)="changeFiltro(1, 1)">
-                <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-up"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'id' && order == 'asc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
               <button (click)="changeFiltro(1, 2)">
-                <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-down"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'id' && order == 'desc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
             </div>
           </div>
@@ -31,10 +43,22 @@
             <span>nome</span>
             <div>
               <button (click)="changeFiltro(2, 1)">
-                <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-up"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'nome' && order == 'asc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
               <button (click)="changeFiltro(2, 2)">
-                <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-down"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'nome' && order == 'desc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
             </div>
           </div>
@@ -44,23 +68,47 @@
             <span>email</span>
             <div>
               <button (click)="changeFiltro(3, 1)">
-                <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-up"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'email' && order == 'asc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
               <button (click)="changeFiltro(3, 2)">
-                <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-down"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'email' && order == 'desc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
             </div>
           </div>
         </th>
-        <th width="">
+        <th width="8%">
           <div>
             <span>tipo</span>
             <div>
               <button (click)="changeFiltro(4, 1)">
-                <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-up"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'tipo' && order == 'asc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
               <button (click)="changeFiltro(4, 2)">
-                <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-down"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'tipo' && order == 'desc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
             </div>
           </div>
@@ -70,15 +118,27 @@
             <span>Data de Cadastro</span>
             <div>
               <button (click)="changeFiltro(5, 1)">
-                <span nz-icon nzType="caret-up" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-up"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'created_at' && order == 'asc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
               <button (click)="changeFiltro(5, 2)">
-                <span nz-icon nzType="caret-down" nzTheme="outline"></span>
+                <span
+                  nz-icon
+                  nzType="caret-down"
+                  nzTheme="outline"
+                  [ngStyle]="{'color': orderBy == 'created_at' && order == 'desc' ? 'var(--azul1)' : 'inherit'}"
+                  >
+                </span>
               </button>
             </div>
           </div>
         </th>
-        <th width="6%">
+        <th width="7%">
           <span>Ações</span>
         </th>
       </tr>
@@ -92,8 +152,8 @@
         <td>{{ pessoa.created_at }}</td>
         <td>
           <div>
-            <app-edit-pessoa></app-edit-pessoa>
-            <app-delete-pessoa></app-delete-pessoa>
+            <app-edit-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-edit-pessoa>
+            <app-delete-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-delete-pessoa>
           </div>
         </td>
       </tr>
