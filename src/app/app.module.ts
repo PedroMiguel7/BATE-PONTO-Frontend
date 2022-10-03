@@ -41,6 +41,7 @@ import { EditPessoaComponent } from './pessoas/components/edit-pessoa/edit-pesso
 import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete-pessoa.component';
 import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
 import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
+import { Error404Component } from './error404/error404.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -68,6 +69,7 @@ registerLocaleData(en);
     PostPessoaComponent,
     GraficoUserComponent,
     GraficoComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
