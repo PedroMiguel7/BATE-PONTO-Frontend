@@ -28,4 +28,8 @@ export class PessoasService {
   postPessoa(pessoa: any){
     return this.HttpClient.post(`${API_PATH}/usuarios/`, pessoa, this.httpOptions).toPromise();
   }
+
+  deletePessoa(id: number){
+    return this.HttpClient.delete(`${API_PATH}/usuarios/inativar/${id}`, this.httpOptions).toPromise()
+  }
 }

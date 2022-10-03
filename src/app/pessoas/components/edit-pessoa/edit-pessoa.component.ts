@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Pessoa } from './../../pessoas.interface';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-edit-pessoa',
