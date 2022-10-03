@@ -61,10 +61,10 @@ export class LoginComponent implements OnInit {
         const decodedToken = helper.decodeToken(res.token);
 
         switch (decodedToken.tipo) {
-          case 1:
+          case "1":
             this.router.navigate(['/home-adm']);
             break;
-          case 2:
+          case "2":
             this.router.navigate(['/home-user']);
             break;
           default:
