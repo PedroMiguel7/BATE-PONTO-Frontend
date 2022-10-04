@@ -22,8 +22,8 @@ export class AuthCasesService {
     }
 
     switch (this.decodedToken.tipo) {
-      case "1": return this.AdminCaseService.autentica_adm(); break;
-      case "2": return this.UserCaseService.autentica_user(); break;    
+      case "1": return this.AdminCaseService.autentica_adm("1"); break;
+      case "2": return this.UserCaseService.autentica_user("2"); break;    
       default: return false; break;
     }
   }
