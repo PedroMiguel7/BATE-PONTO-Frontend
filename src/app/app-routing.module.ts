@@ -6,13 +6,15 @@ import { HomeUserComponent } from './home-user/home-user.component';
 import { LoginComponent } from './login/login.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { Error404Component } from './error404/error404.component';
+import { AuthGuardAdminService } from './services/auth-guard-admin.service';
+import { AuthGuardUserService } from './services/auth-guard-user.service';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home-adm', component: HomeAdminComponent },
-  { path: 'home-user', component: HomeUserComponent },
-  { path: 'users', component: PessoasComponent },
-  { path: 'users/:id', component: UserDtComponent },
+  { path: 'home-user', canActivate: [AuthGuardUserService], component: HomeUserComponent },
+  { path: 'home-adm', canActivate: [AuthGuardAdminService], component: HomeAdminComponent },
+  { path: 'users', canActivate: [AuthGuardAdminService], component: PessoasComponent },
+  { path: 'users/:id', canActivate: [AuthGuardAdminService], component: UserDtComponent },
   { path: '**', component: Error404Component }
 ];
 
