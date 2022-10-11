@@ -22,7 +22,7 @@
     margin-bottom: 15px;
 
     position: relative;
-    top: 172px;
+    top: 17.55vh;
 
     .mini-square {
       position: absolute;
@@ -71,9 +71,6 @@
   }
 }
 
-.active {
-  background: red;
-}
 .logout-section {
   width: 100%;
   display: flex;
