@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
+import { AuthGuardUserService } from './../services/auth-guard-user.service';
+import { AuthGuardAdminService } from '../services/auth-guard-admin.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -16,6 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private LoginService: LoginService,
     private formBuilder: FormBuilder,
+    private AuthGuardAdminService: AuthGuardAdminService, 
+    private AuthGuardUserService: AuthGuardUserService,
     router: Router
   ) {
     this.router = router;
@@ -47,6 +53,9 @@ export class LoginComponent implements OnInit {
 
     this.LoginService.fazLogin(this.user)
       .then((res: any): any => {
+        (this.AuthGuardAdminService.recebeToken(res.token)),
+        (this.AuthGuardUserService.recebeToken(res.token))
+
         localStorage.setItem('access_token', res.token);
 
         // Exibindo o alert em caso de sucesso
