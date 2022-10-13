@@ -15,7 +15,11 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
@@ -42,6 +46,7 @@ import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete
 import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
 import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
 import { Error404Component } from './error404/error404.component';
+import { DetalhesPessoaComponent } from './pessoas/components/detalhes-pessoa/detalhes-pessoa.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -70,8 +75,10 @@ registerLocaleData(en);
     GraficoUserComponent,
     GraficoComponent,
     Error404Component,
+    DetalhesPessoaComponent,
   ],
   imports: [
+    Ng2SearchPipeModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -88,6 +95,9 @@ registerLocaleData(en);
     NzDividerModule,
     NzModalModule,
     NzPopconfirmModule,
+    NzFormModule,
+    NzButtonModule,
+    NzSelectModule,
     NgxChartsModule,
     JwtModule.forRoot({
       config: {
