@@ -33,7 +33,7 @@ import { CalendarioUserComponent } from './home-user/components/calendario-user/
 import { GraficoUserComponent } from './home-user/components/grafico-user/grafico-user.component';
 import { BatePontoUserComponent } from './home-user/components/bate-ponto-user/bate-ponto-user.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
-import { UserDtComponent } from './components/user-dt/user-dt.component';
+import { UserDtComponent } from './user-dt/user-dt.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { FrequenciaComponent } from './home-admin/components/frequencia/frequencia.component';
 import { TabelaPessoasComponent } from './pessoas/components/tabela-pessoas/tabela-pessoas.component';
