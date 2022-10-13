@@ -28,6 +28,12 @@ export class PostPessoaComponent implements OnInit {
 
   validateForm!: UntypedFormGroup;
 
+  checkSenha(){
+    if (Object.values(this.validateForm.controls["Senha"]) !== Object.values(this.validateForm.controls["Confirmacao"])) {
+      Object.values(this.validateForm.controls["Confirmacao"])
+    }
+  }
+
   submitForm(): void {
     this.isOkLoading = true;
 

@@ -144,7 +144,7 @@
             </div>
           </div>
         </th>
-        <th width="7%">
+        <th width="9%">
           <span>Ações</span>
         </th>
       </tr>
@@ -158,6 +158,7 @@
         <td>{{ pessoa.created_at }}</td>
         <td>
           <div>
+            <app-detalhes-pessoa [pessoa]="pessoa"></app-detalhes-pessoa>
             <app-edit-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-edit-pessoa>
             <app-delete-pessoa [pessoa]="pessoa" (update)="getPessoas()"></app-delete-pessoa>
           </div>

@@ -46,6 +46,7 @@ import { DeletePessoaComponent } from './pessoas/components/delete-pessoa/delete
 import { PostPessoaComponent } from './pessoas/components/post-pessoa/post-pessoa.component';
 import { GraficoComponent } from './home-admin/components/grafico/grafico.component';
 import { Error404Component } from './error404/error404.component';
+import { DetalhesPessoaComponent } from './pessoas/components/detalhes-pessoa/detalhes-pessoa.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -74,6 +75,7 @@ registerLocaleData(en);
     GraficoUserComponent,
     GraficoComponent,
     Error404Component,
+    DetalhesPessoaComponent,
   ],
   imports: [
     Ng2SearchPipeModule,

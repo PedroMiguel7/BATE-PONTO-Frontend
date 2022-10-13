@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+
+  * {
+    color: white;
+  }
+
+  button {
+    width: 1.7vw;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  #editButton {
+    background-color: rgb(66, 152, 223);
+    &:hover {
+      background-color: rgb(50, 170, 240);
+    }
+  }
+}
