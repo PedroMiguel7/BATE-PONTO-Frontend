@@ -17,7 +17,7 @@ export class DetalhesPessoaComponent implements OnInit {
 
   redirecionaPessoa() {
     console.log(this.pessoa)
-    this.router.navigate([`/pessoas/${this.pessoa.id}`]);
+    this.router.navigate([`/users/${this.pessoa.id}`]);
   }
 
   ngOnInit(): void {
