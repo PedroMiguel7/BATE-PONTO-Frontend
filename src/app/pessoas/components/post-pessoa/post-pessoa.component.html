@@ -7,7 +7,85 @@
   [(nzVisible)]="isVisible"
   nzTitle="Cadastrar Pessoa"
   (nzOnCancel)="handleCancel()"
-  (nzOnOk)="handleOk()"
+  (nzOnOk)="submitForm()"
+  [nzOkLoading]="isOkLoading"
 >
-  <ng-container *nzModalContent> </ng-container>
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+
+      <!-- Input do Nome -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Digite o nome do usuário!">
+          <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input formControlName="Nome" placeholder="Nome" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Input do Email -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Digite um email válido!">
+          <nz-input-group nzPrefixIcon="mail">
+            <input type="email" nz-input formControlName="Email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Input da Senha -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Digite uma senha válida!">
+          <nz-input-group [nzSuffix]="eyePwd" nzPrefixIcon="lock">
+            <input
+              [type]="pwdVisible ? 'text' : 'password'"
+              nz-input formControlName="Senha"
+              placeholder="Senha"
+            />
+          </nz-input-group>
+          <ng-template #eyePwd>
+            <span
+              nz-icon
+              [nzType]="pwdVisible ? 'eye-invisible' : 'eye'"
+              (click)="pwdVisible = !pwdVisible"
+            ></span>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Input da Confirmação da Senha -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Digite uma senha válida!">
+          <nz-input-group [nzSuffix]="eyeConfirm" nzPrefixIcon="lock">
+            <input
+              [type]="pwdConfirmVisible ? 'text' : 'password'"
+              nz-input
+              formControlName="Confirmacao"
+              placeholder="Confirme sua senha"
+            />
+          </nz-input-group>
+          <ng-template #eyeConfirm>
+            <span
+              nz-icon
+              [nzType]="pwdConfirmVisible ? 'eye-invisible' : 'eye'"
+              (click)="pwdConfirmVisible = !pwdConfirmVisible"
+            ></span>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+
+      <!-- Input para definir o tipo do Usuário -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please select your gender!">
+          <nz-select
+            id="type"
+            formControlName="Tipo"
+            nzPlaceHolder="Tipo do Usuário"
+          >
+            <nz-option nzValue="1" nzLabel="Admin"></nz-option>
+            <nz-option nzValue="2" nzLabel="Usuário"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+
+  </ng-container>
 </nz-modal>

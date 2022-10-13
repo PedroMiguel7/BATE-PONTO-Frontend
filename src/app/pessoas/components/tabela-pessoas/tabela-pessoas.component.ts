@@ -12,6 +12,7 @@ export class TabelaPessoasComponent implements OnInit {
 
   orderBy = 'id';
   order = 'asc';
+  search = ""
   loading = false;
   dataList: Pessoa[] = [];
 
@@ -23,6 +24,10 @@ export class TabelaPessoasComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
+
+  FiltSeach(){
+    console.log(this.search)
   }
 
   changeFiltro(orderBy: number, order: number) {

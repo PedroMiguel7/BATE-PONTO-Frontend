@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { PessoasService } from './../../pessoas.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 
 @Component({
   selector: 'app-post-pessoa',
@@ -6,23 +9,60 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-pessoa.component.scss'],
 })
 export class PostPessoaComponent implements OnInit {
-  isVisible = false;
+  @Output() update = new EventEmitter<any>();
 
-  constructor() {}
+  isVisible = false;
+  isOkLoading = false;
+  pwdVisible = false
+  pwdConfirmVisible = false
+
+  constructor(private fb: UntypedFormBuilder, private PessoaService: PessoasService) {}
 
   showModal(): void {
     this.isVisible = true;
   }
 
-  handleOk(): void {
-    console.log('Button ok clicked!');
-    this.isVisible = false;
-  }
-
   handleCancel(): void {
-    console.log('Button cancel clicked!');
     this.isVisible = false;
   }
 
-  ngOnInit(): void {}
+  validateForm!: UntypedFormGroup;
+
+  checkSenha(){
+    if (Object.values(this.validateForm.controls["Senha"]) !== Object.values(this.validateForm.controls["Confirmacao"])) {
+      Object.values(this.validateForm.controls["Confirmacao"])
+    }
+  }
+
+  submitForm(): void {
+    this.isOkLoading = true;
+
+    if (this.validateForm.valid) {
+      this.PessoaService.postPessoa(this.validateForm.value)
+                        .then((res) => {
+                          this.isOkLoading = false;
+                          this.isVisible = false;
+                          this.update.emit(null)
+                        })
+                        .catch((err) => console.error(err))
+    } else {
+      Object.values(this.validateForm.controls).forEach(control => {
+        if (control.invalid) {
+          control.markAsDirty();
+          control.updateValueAndValidity({ onlySelf: true });
+        }
+      });
+      this.isOkLoading = false;
+    }
+  }
+
+  ngOnInit(): void {
+    this.validateForm = this.fb.group({
+      Nome: [null, [Validators.required]],
+      Email: [null, [Validators.required]],
+      Senha: [null, [Validators.required]],
+      Confirmacao: [null, [Validators.required]],
+      Tipo: [null, [Validators.required]]
+    });
+  }
 }
